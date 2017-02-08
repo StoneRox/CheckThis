@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="checkthis.css">
+    <script src="checkthis.js"></script>
+</head>
+<body >
+<nav >
+    <ul type="none">
+        <li>
+            <div class="logo" id="logo" onclick="swing()"></div>
+        </li>
+        <li>
+            <span  class="fake_btn btn_hide">Софтуни</span>
+            <span class="fake_btn btn_hide">Обучения</span>
+            <span class="btn_hide">Работа</span>
+            <span class="btn_hide">Партньори</span>
+            <span class="btn_hide">Форум</span>
+            <span class="btn_hide">Блог</span>
+            <span class="btn_hide">Контакти</span>
+        </li>
+        <li class="search_icon">&#9906;</li>
+        <li class="btn_orange" onclick="
+        header.style.transform='rotateX(-90deg)';
+        setTimeout(go, 4000);
+        function go() {
+          window.location.href='http://softuni.bg';
+        }">Вход</li>
+        <li class="menu_mobile">&equiv;</li>
+    </ul>
+</nav>
+<header id="header" class="background">
+    <div>
+        <h1>
+            Достъпно и качествено
+            <br/>софтуерно образование
+        </h1>
+    </div>
+    <div>
+        <ul type="none">
+            <li class="btn_orange">Кандидатствай!</li>
+            <li>Учебен план</li>
+            <li>За СофтУни</li>
+        </ul>
+    </div>
+</header>
+<div class="bubble" id="nag">
+    <img class="avatar" src="https://softuni.bg/Files/UserFiles/ImageGallery/svetlin_nakov-trainers.jpg">
+    <div class="bubble_text">
+        <div class="flipY" id="nag_text"></div>
+    </div>
+</div>
+</body>
+</html>
