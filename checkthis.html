@@ -15,7 +15,7 @@
         <li>
             <span  class="fake_btn btn_hide">Софтуни</span>
             <span class="fake_btn btn_hide">Обучения</span>
-            <span class="btn_hide">Работа</span>
+            <span class="btn_hide" onclick="getWork()">Работа</span>
             <span class="btn_hide">Партньори</span>
             <span class="btn_hide">Форум</span>
             <span class="btn_hide">Блог</span>
@@ -31,6 +31,7 @@
         <li class="menu_mobile">&equiv;</li>
     </ul>
 </nav>
+<div class="dirt_counter" id="dirt_Counter"><div class="fix_dirt_counter">Петна: <span id="dirt_spots_left">0</span></div></div>
 <header id="header" class="background">
     <div>
         <h1>
@@ -52,5 +53,6 @@
         <div class="flipY" id="nag_text"></div>
     </div>
 </div>
+<audio src="eat_cookie.wav" id="eat_cookie"></audio>
 </body>
 </html>

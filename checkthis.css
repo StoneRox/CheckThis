@@ -8,7 +8,8 @@ body{
     min-width: 360px;
     perspective: 3000px;
     background: url("https://initiate.alphacoders.com/images/648/cropped-1366-768-648549.jpg?1966") no-repeat center;
-    background-size: auto;
+    background-size: cover;
+    height: 550px;
 }
 
 nav{
@@ -144,12 +145,37 @@ header li{
     position: relative;
     bottom: 130px;
     left: 60px;
-
 }
 .flipY{
     transform: rotateY(180deg);
 }
-
+.dirt{
+    position: fixed;
+    cursor: pointer;
+}
+.dirt_counter{
+    position: fixed;
+    left: 47%;
+    top: 15%;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    color: #ffffff;
+    font-weight: bold;
+    padding:  13px 13px;
+    transform: rotate(-20deg);
+    display: none;
+}
+.fix_dirt_counter{
+    transform: rotate(20deg);
+}
+.cookie{
+    width: 180px;
+    height: 180px;
+    position: fixed;
+    top: 200px;
+    left: 200px;
+    cursor: pointer;
+}
 @media screen and (max-width: 1200px) {
     .logo{
         background: url("https://softuni.bg/content/images/softuni-mobile-logo.png") no-repeat;
