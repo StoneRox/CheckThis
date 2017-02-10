@@ -1,3 +1,4 @@
+let nagHiding = false;
 function swing() {
     let nagText = nag_text.innerHTML;
     if(nagText==''){
@@ -32,19 +33,29 @@ function swing() {
     else if(nagText=='Това ти ще го оправяш!'){
         nagText='hide';
     }
-    if (nagText!='hide' && nag.style.display=='none'){
+    if (nagText!='hide'){
         nag.style.display='block';
         nag_text.innerHTML=nagText;
         hideNagBuble();
     }
 }
 function hideNagBuble(save) {
-    setTimeout(function () {
-        nag.style.display='none';
-        if(save != null){
-            nag_text.innerHTML = save;
-        }
-    }, 2000);
+    if(!nagHiding){
+        nagHiding = true;
+        setTimeout(function () {
+            nag.style.opacity='0';
+        }, 1000);
+        setTimeout(function () {
+            nag.style.display='none';
+            nagHiding = false;
+            if(save != null){
+                nag_text.innerHTML = save;
+            }
+            nag.style.transition='';
+            nag.style.opacity='1';
+            nag.style.transition='opacity 1s';
+        }, 2000);
+    }
 }
 function getWork() {
     let rnd = RandomInt(3,10);
@@ -78,9 +89,9 @@ function getWork() {
     let spots = parseInt(dirt_spots_left.innerHTML);
     spots += rnd;
     dirt_spots_left.innerHTML = spots;
-    if(spots > 221){spots = 221;}
-    let green = 221-spots;
-    dirt_Counter.style.background = `rgba(${spots},${green},0, 0.5)`;
+    if(spots*5 > 220){spots = 44;}
+    let green = 221-spots*5;
+    dirt_Counter.style.background = `rgba(200 ,${green},0, 0.5)`;
     if(dirt_Counter.style.display!='block'){
         dirt_Counter.style.display='block';
     }
@@ -104,9 +115,9 @@ function clean(id) {
         nag.style.display = 'block';
         hideNagBuble(saveNag);
     }
-    if(spots > 221){spots = 221;}
-    let green = 221-spots;
-    dirt_Counter.style.background = `rgba(${spots},${green},0, 0.5)`;
+    if(spots*5 > 220){spots = 44;}
+    let green = 221-spots*5;
+    dirt_Counter.style.background = `rgba(200,${green},0, 0.5)`;
 }
 function RandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
