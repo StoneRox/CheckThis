@@ -74,9 +74,9 @@ function getWork() {
         else {
             task.style.transform = `rotate(${random}deg) rotateY(180deg)`;
         }
-        random = Math.floor(Math.random() *(70)+10);
+        random = Math.floor(Math.random() *(55)+10);
         task.style.top = `${random}%`;
-        random = Math.floor(Math.random() *(70)+10);
+        random = Math.floor(Math.random() *(55)+10);
         task.style.left = `${random}%`;
         task.style.width = `${random/3}%`;
         task.style.height = `${Math.ceil(random/1.5)}%`;
