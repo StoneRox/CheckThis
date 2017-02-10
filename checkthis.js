@@ -1,3 +1,4 @@
+let nagHiding = false;
 function swing() {
     let nagText = nag_text.innerHTML;
     if(nagText==''){
@@ -32,19 +33,29 @@ function swing() {
     else if(nagText=='Това ти ще го оправяш!'){
         nagText='hide';
     }
-    if (nagText!='hide' && nag.style.display=='none'){
+    if (nagText!='hide'){
         nag.style.display='block';
         nag_text.innerHTML=nagText;
         hideNagBuble();
     }
 }
 function hideNagBuble(save) {
-    setTimeout(function () {
-        nag.style.display='none';
-        if(save != null){
-            nag_text.innerHTML = save;
-        }
-    }, 2000);
+    if(!nagHiding){
+        nagHiding = true;
+        setTimeout(function () {
+            nag.style.opacity='0';
+        }, 1000);
+        setTimeout(function () {
+            nag.style.display='none';
+            nagHiding = false;
+            if(save != null){
+                nag_text.innerHTML = save;
+            }
+            nag.style.transition='';
+            nag.style.opacity='1';
+            nag.style.transition='opacity 1s';
+        }, 2000);
+    }
 }
 function getWork() {
     let rnd = RandomInt(3,10);
