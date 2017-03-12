@@ -1,25 +1,8 @@
 let nagHiding = false;
-function swing() {
+function nagging() {
     let nagText = nag_text.innerHTML;
     if(nagText==''){
         nagText='Какво направи пак?';
-        let swinging = setInterval(go, 700);
-        logo.style.transform='rotate(110deg)';
-        logo.style.transition='transform 1s';
-        let on = true;
-        function go() {
-            if(nag_text.innerHTML=='Спри да чупиш!'){
-                clearInterval(swinging);
-            }
-            if(on){
-                logo.style.transform='rotate(70deg)';
-                on = false;
-            }
-            else {
-                logo.style.transform='rotate(110deg)';
-                on = true;
-            }
-        }
     }
     else if(nagText=='Какво направи пак?'){
         nagText='Спри да чупиш!';
