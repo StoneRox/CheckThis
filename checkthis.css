@@ -24,6 +24,7 @@ nav{
     background: #234465;
     padding: 10px;
     text-align: center;
+    animation-fill-mode: forwards;
 }
 nav li span, nav li{
     display: inline-block;
@@ -120,6 +121,7 @@ header{
     transition: transform 4s;
     transform-origin: center top;
     padding-top: 150px;
+    animation-fill-mode: forwards;
 }
 h1{
     font-weight: 700;
@@ -230,6 +232,24 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
     10% {transform: rotate(90deg);}
     20% {transform: rotate(90deg);}
     100% {transform: rotate(0deg);}
+}
+@keyframes spiralNav
+{
+    from {
+        transform: rotate(0deg) translate(0px) scale(1);
+    }
+    to {
+        transform: rotate(90deg) translate(200px) scale(0);
+    }
+}
+@keyframes spiralHeader
+{
+    from {
+        transform: rotate(0deg) translate(0px) scale(1) rotateX(-90deg);
+    }
+    to {
+        transform: rotate(90deg) translate(200px) scale(0) rotateX(-90deg);
+    }
 }
 @media screen and (max-width: 1200px) {
     .logo_left, .logo_right{

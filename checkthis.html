@@ -9,7 +9,7 @@
 
 </head>
 <body>
-<nav>
+<nav id="nav_bar">
     <div class="logo" onclick="nagging()">
         <div class="logo_left"></div>
         <div class="logo_right"></div>
@@ -30,6 +30,10 @@
         <li class="btn_orange" onclick="
         header.style.transform='rotateX(-90deg)';
         document.getElementById('portal').style.display='block';
+        setTimeout(function() {
+          header.style.animation='spiralHeader 5s';
+          nav_bar.style.animation='spiralNav 5s';
+        }, 2000);
         setTimeout(go, 6000);
         function go() {
           window.location.href='http://softuni.bg';
