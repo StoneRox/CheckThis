@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=0, initial-scale=1.0">
     <title>SoftUni Upgrade</title>
     <link rel="stylesheet" href="checkthis.css">
     <script src="checkthis.js"></script>
@@ -15,13 +16,15 @@
     </div>
     <ul class="no-bullets">
         <li>
-            <span class="fake_btn btn_hide">Софтуни</span>
-            <span class="fake_btn btn_hide">Обучения</span>
-            <span class="btn_hide" onclick="getWork()">Работа</span>
-            <span class="btn_hide">Партньори</span>
-            <span class="btn_hide">Форум</span>
-            <span class="btn_hide">Блог</span>
-            <span class="btn_hide">Контакти</span>
+            <div class="menu_links">
+                <span class="fake_btn menu_btn">Софтуни</span>
+                <span class="fake_btn menu_btn">Обучения</span>
+                <span class="menu_btn" onclick="getWork()">Работа</span>
+                <span class="menu_btn">Партньори</span>
+                <span class="menu_btn">Форум</span>
+                <span class="menu_btn">Блог</span>
+                <span class="menu_btn">Контакти</span>
+            </div>
         </li>
         <li class="search_icon"><i class="fa fa-search" aria-hidden="true"></i></li>
         <li class="btn_orange" onclick="
@@ -32,7 +35,6 @@
           window.location.href='http://softuni.bg';
         }">Вход
         </li>
-        <li class="menu_mobile">&equiv;</li>
     </ul>
 </nav>
 <div class="dirt_counter" id="dirt_Counter">

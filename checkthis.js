@@ -61,8 +61,8 @@ function getWork() {
         task.style.top = `${random}%`;
         random = Math.floor(Math.random() *(55)+10);
         task.style.left = `${random}%`;
-        task.style.width = `${random/3}%`;
-        task.style.height = `${Math.ceil(random/1.5)}%`;
+        task.style.width = `${random/4}vw`;
+        task.style.height = `${Math.ceil(random/4.5)}vw`;
     }
     let saveNag = nag_text.innerHTML;
     nag_text.innerHTML = "Нали искаш работа? Ето изчисти!";
@@ -93,8 +93,8 @@ function clean(id) {
         prize.setAttribute('class','cookie');
         prize.setAttribute('onclick','this.parentNode.removeChild(this); eat_cookie.play();');
         document.body.appendChild(prize);
-        prize.style.top=`${RandomInt(10,90)}%`;
-        prize.style.left=`${RandomInt(10,90)}%`;
+        prize.style.top=`${RandomInt(10,70)}vh`;
+        prize.style.left=`${RandomInt(10,70)}vw`;
         nag.style.display = 'block';
         hideNagBuble(saveNag);
     }

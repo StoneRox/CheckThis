@@ -14,10 +14,10 @@ body{
 }
 .portal{
     position: absolute;
-    width: 100%;
-    top: -20vw;
-    border-radius: 50%;
+    width: 95vw;
+    top: calc((-50vh + (95vw + 100vh) / 2) * (-0.5) );
     display: none;
+    margin-left: 2vw;
     z-index: -1;
 }
 nav{
@@ -35,7 +35,7 @@ nav li span, nav li{
     font-size: 13px;
     font-weight: 900;
 }
-.btn, .logo, .btn_hide, .btn_orange, .search_icon{
+.btn, .logo, .menu_btn, .btn_orange, .search_icon{
     cursor: pointer;
 }
 .fake_btn::after{
@@ -112,7 +112,7 @@ nav ul{
 }
 .background{
     background-size: contain;
-    background: url("https://softuni.bg/content/images/leadBG.jpg");
+    background: url("https://softuni.bg/content/images/leadBG.jpg") no-repeat;
     height: 600px;
     color: #ffffff;
 }
@@ -130,10 +130,6 @@ h1{
     max-width: 550px;
     margin: 0 auto;
     text-align: center;
-}
-.menu_mobile{
-    font-size: 40px;
-    display: none;
 }
 header div li{
     border-radius: 20px;
@@ -245,8 +241,21 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
     }
 }
 @media screen and (max-width: 990px) {
-    .btn_hide{
+    .menu_links{
         display: none;
+        margin: 8px auto auto;
+        background: #234465;
+        padding: 10px 0;
+        width: 100vw;
+        position: fixed;
+        left: 0;
+        border-top: 2px solid #236688;
+    }
+    .menu_btn{
+        margin-right: 20px;
+    }
+    .fake_btn:first-of-type{
+        padding-left: 0;
     }
     .logo_left, .logo_right{
         background-image: url("https://softuni.bg/content/images/software-university-logo.png");
@@ -255,13 +264,32 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
     .logo_right{
         background-position-x: -90px;
     }
-    .menu_mobile{
+    nav ul li:first-of-type{
+        float: right;
+        padding: 0;
+        margin-left: 20px;
+        width: 30px;
+    }
+    nav ul li:first-of-type:hover .menu_links{
+        display: block;
+    }
+    nav ul li:first-of-type:hover{
+        padding-bottom: 40px;
+    }
+    .menu_btn{
         display: inline-block;
     }
+    nav ul li:first-of-type:before{
+        font-family: FontAwesome, sans-serif;
+        content: "\f0c9";
+        font-size: 30px;
+    }
+
     nav ul{
         position: relative;
         bottom: 5px;
-        margin-top: 0;
+        margin-top: 15px;
+
     }
 }
 @media screen and (max-width: 525px) {
@@ -280,5 +308,12 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
     .portal{
         top: 70px;
     }
+    .menu_btn{
+        display: block;
+        font-size: 5vw;
+        margin: 0;
+        padding: 0;
+    }
+
 }
 
