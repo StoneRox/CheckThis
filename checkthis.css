@@ -6,7 +6,7 @@
 }
 body{
     font-family: "LatoBlack","Arial","Helvetica",sans-serif;
-    min-width: 360px;
+    min-width: 380px;
 	-webkit-perspective: 3000px;
     perspective: 3000px;
     width: 100%;
@@ -27,6 +27,7 @@ nav{
     text-align: center;
 	-webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    min-width: 360px;
 }
 nav li span, nav li{
     display: inline-block;
@@ -138,6 +139,7 @@ header{
     padding-top: 150px;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    min-width: 380px;
 }
 h1{
     font-weight: 700;
@@ -325,8 +327,9 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
         padding: 10px 0;
         width: 100vw;
         position: absolute;
-        right: -87px;
+        right: -70px;
         border-top: 2px solid #236688;
+        min-width: 380px;
     }
     .menu_btn{
         margin-right: 20px;
@@ -346,6 +349,9 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
         padding: 0;
         margin-left: 20px;
         width: 30px;
+    }
+    .fake_btn:first-of-type{
+        margin-left: 20px;
     }
     nav ul li:first-of-type:hover .menu_links{
         display: block;
@@ -387,10 +393,17 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
     }
     .menu_btn{
         display: block;
-        font-size: 5vw;
+        font-size: 18px;
         margin: 0;
         padding: 0;
     }
 
+    .fake_btn:first-of-type{
+        margin-left: 0;
+    }
 }
-
+@media screen and (max-width: 380px){
+    .menu_links{
+        right: calc(-(100vw - 298px));
+    }
+}
