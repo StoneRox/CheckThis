@@ -6,7 +6,7 @@
 }
 body{
     font-family: "LatoBlack","Arial","Helvetica",sans-serif;
-    min-width: 380px;
+    min-width: 320px;
 	-webkit-perspective: 3000px;
     perspective: 3000px;
     width: 100%;
@@ -27,7 +27,7 @@ nav{
     text-align: center;
 	-webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    min-width: 360px;
+    min-width: 300px;
 }
 nav li span, nav li{
     display: inline-block;
@@ -139,7 +139,7 @@ header{
     padding-top: 150px;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    min-width: 380px;
+    min-width: 320px;
 }
 h1{
     font-weight: 700;
@@ -405,5 +405,8 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
 @media screen and (max-width: 380px){
     .menu_links{
         right: calc(-(100vw - 298px));
+    }
+    nav ul{
+        margin-right: calc(100vw - 320px);
     }
 }
