@@ -7,6 +7,7 @@
 body{
     font-family: "LatoBlack","Arial","Helvetica",sans-serif;
     min-width: 360px;
+	-webkit-perspective: 3000px;
     perspective: 3000px;
     width: 100%;
     height: 550px;
@@ -24,6 +25,7 @@ nav{
     background: #234465;
     padding: 10px;
     text-align: center;
+	-webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
 nav li span, nav li{
@@ -66,6 +68,7 @@ nav ul{
     margin-top: 10px;
 }
 .logo:active .logo_left, .logo:active .logo_right{
+	-webkit-animation-play-state: running;
     animation-play-state: running;
 }
 .logo_left, .logo_right{
@@ -80,16 +83,25 @@ nav ul{
     animation-timing-function: ease-in;
     animation-duration: 3s;
     animation-play-state: paused;
+	-webkit-animation-iteration-count: infinite;
+    -webkit-animation-fill-mode: backwards;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-play-state: paused;
 }
 .logo_right{
     background-position-x: -90px;
     right: 5px;
     transform-origin: bottom left;
     animation-name: logo_right_anim;
+	-webkit-transform-origin: bottom left;
+    -webkit-animation-name: logo_right_anim;
 }
 .logo_left{
     transform-origin: bottom right;
     animation-name: logo_left_anim;
+	-webkit-transform-origin: bottom right;
+    -webkit-animation-name: logo_left_anim;
 }
 .search_icon{
     font-size: 20px;
@@ -118,9 +130,13 @@ nav ul{
     color: #ffffff;
 }
 header{
+	-webkit-transition: -webkit-transform 4s;
+    transition: -webkit-transform 4s;
     transition: transform 4s;
+    -webkit-transform-origin: center top;
     transform-origin: center top;
     padding-top: 150px;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
 h1{
@@ -164,6 +180,7 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
     width: 300px;
     height: 220px;
     display: none;
+    -webkit-transition: opacity 1s;
     transition: opacity 1s;
 }
 .avatar{
@@ -204,10 +221,12 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
     color: #ffffff;
     font-weight: bold;
     padding:  13px 13px;
+    -webkit-transform: rotate(-20deg);
     transform: rotate(-20deg);
     display: none;
 }
 .fix_dirt_counter{
+    -webkit-transform: rotate(-20deg);
     transform: rotate(20deg);
 }
 .cookie{
@@ -221,33 +240,71 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
 .no_bullets{
     list-style: none;
 }
+@-webkit-keyframes logo_left_anim {
+    0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+    10% {-webkit-transform: rotate(-90deg);transform: rotate(-90deg);}
+    20% {-webkit-transform: rotate(-90deg);transform: rotate(-90deg);}
+    100% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+}
 @keyframes logo_left_anim {
-    0% {transform: rotate(0deg);}
-    10% {transform: rotate(-90deg);}
-    20% {transform: rotate(-90deg);}
-    100% {transform: rotate(0deg);}
+    0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+    10% {-webkit-transform: rotate(-90deg);transform: rotate(-90deg);}
+    20% {-webkit-transform: rotate(-90deg);transform: rotate(-90deg);}
+    100% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+}
+@-webkit-keyframes logo_right_anim {
+    0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+    10% {-webkit-transform: rotate(90deg);transform: rotate(90deg);}
+    20% {-webkit-transform: rotate(90deg);transform: rotate(90deg);}
+    100% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
 }
 @keyframes logo_right_anim {
-    0% {transform: rotate(0deg);}
-    10% {transform: rotate(90deg);}
-    20% {transform: rotate(90deg);}
-    100% {transform: rotate(0deg);}
+    0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+    10% {-webkit-transform: rotate(90deg);transform: rotate(90deg);}
+    20% {-webkit-transform: rotate(90deg);transform: rotate(90deg);}
+    100% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+}
+@-webkit-keyframes spiralNav
+{
+    from {
+        -webkit-transform: rotate(0deg) translate(0px) scale(1);
+        transform: rotate(0deg) translate(0px) scale(1);
+    }
+    to {
+        -webkit-transform: rotate(90deg) translate(200px) scale(0);
+        transform: rotate(90deg) translate(200px) scale(0);
+    }
 }
 @keyframes spiralNav
 {
     from {
+        -webkit-transform: rotate(0deg) translate(0px) scale(1);
         transform: rotate(0deg) translate(0px) scale(1);
     }
     to {
+        -webkit-transform: rotate(90deg) translate(200px) scale(0);
         transform: rotate(90deg) translate(200px) scale(0);
+    }
+}
+@-webkit-keyframes spiralHeader
+{
+    from {
+        -webkit-transform: rotate(0deg) translate(0px) scale(1) rotateX(-90deg);
+        transform: rotate(0deg) translate(0px) scale(1) rotateX(-90deg);
+    }
+    to {
+        -webkit-transform: rotate(90deg) translate(200px) scale(0) rotateX(-90deg);
+        transform: rotate(90deg) translate(200px) scale(0) rotateX(-90deg);
     }
 }
 @keyframes spiralHeader
 {
     from {
+        -webkit-transform: rotate(0deg) translate(0px) scale(1) rotateX(-90deg);
         transform: rotate(0deg) translate(0px) scale(1) rotateX(-90deg);
     }
     to {
+        -webkit-transform: rotate(90deg) translate(200px) scale(0) rotateX(-90deg);
         transform: rotate(90deg) translate(200px) scale(0) rotateX(-90deg);
     }
 }
