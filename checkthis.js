@@ -59,10 +59,18 @@ function getWork() {
         }
         random = Math.floor(Math.random() *(55)+10);
         task.style.top = `${random}%`;
-        random = Math.floor(Math.random() *(55)+10);
+        random = Math.floor(Math.random() *(25)+10);
         task.style.left = `${random}%`;
-        task.style.width = `${random/4}vw`;
-        task.style.height = `${Math.ceil(random/4.5)}vw`;
+        random = Math.floor(Math.random() *(55)+10);
+        if(window.innerWidth > window.innerHeight){
+            task.style.width = `${random/3}vw`;
+            task.style.height = `${Math.ceil(random/3)}vw`;
+        }
+        else {
+            task.style.width = `${random/2}vh`;
+            task.style.height = `${Math.ceil(random/2)}vh`;
+        }
+
     }
     let saveNag = nag_text.innerHTML;
     nag_text.innerHTML = "Нали искаш работа? Ето изчисти!";

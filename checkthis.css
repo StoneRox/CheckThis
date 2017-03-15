@@ -23,26 +23,31 @@ body{
 }
 nav{
     background: #234465;
-    padding: 10px;
+    padding: 0 10px;
     text-align: center;
 	-webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
     min-width: 300px;
+    height: 60px;
 }
-nav li span, nav li{
-    display: inline-block;
-    padding-left: 10px;
-    padding-right: 5px;
+nav li, .drop-down li a{
     color: #aab2bc;
     text-transform: uppercase;
-    vertical-align: middle;
+    vertical-align: top;
     font-size: 13px;
     font-weight: 900;
+    outline: 0;
 }
-.btn, .logo, .menu_btn, .btn_orange, .search_icon{
+.main-menu > li, .menu-links > li{
+    display: inline-block;
+}
+.menu-links > li{
+    padding: 10px 5px 10px 10px;
+}
+.btn, .logo, .menu-btn, .btn-orange, .search-icon{
     cursor: pointer;
 }
-.fake_btn::after{
+.drop-down::after{
     border-right: 5px solid transparent;
     border-left: 5px solid transparent;
     border-top: 5px solid #aab2bc;
@@ -52,27 +57,29 @@ nav li span, nav li{
     margin-left: 10px;
     top: 10px;
 }
-nav li span:hover{
+.menu-links li:hover, .menu-links li a:hover{
     color: #ffffff;
 }
-nav li span:hover.fake_btn::after{
+.menu-links > li:hover.drop-down::after{
     border-top: 5px solid #ffffff;
 }
 .logo{
     display: inline-block;
+    margin-top: 10px;
+    outline: 0;
 }
-nav ul{
+.main-menu{
     display: inline-block;
     vertical-align: top;
     float: right;
     margin-right: 60px;
-    margin-top: 10px;
+    margin-top: 8px;
 }
-.logo:active .logo_left, .logo:active .logo_right{
+.logo:active .logo-left, .logo:active .logo-right{
 	-webkit-animation-play-state: running;
     animation-play-state: running;
 }
-.logo_left, .logo_right{
+.logo-left, .logo-right{
     background: url("https://softuni.bg/content/images/software-university-logo.png") no-repeat;
     background-size: 200% 100%;
     height: 40px;
@@ -90,7 +97,7 @@ nav ul{
     -webkit-animation-duration: 3s;
     -webkit-animation-play-state: paused;
 }
-.logo_right{
+.logo-right{
     background-position-x: -90px;
     right: 5px;
     transform-origin: bottom left;
@@ -98,20 +105,21 @@ nav ul{
 	-webkit-transform-origin: bottom left;
     -webkit-animation-name: logo_right_anim;
 }
-.logo_left{
+.logo-left{
     transform-origin: bottom right;
     animation-name: logo_left_anim;
 	-webkit-transform-origin: bottom right;
     -webkit-animation-name: logo_left_anim;
 }
-.search_icon{
+.main-menu > li.search-icon{
     font-size: 20px;
     margin-left: 10px;
+    margin-top: 10px;
 }
-.search_icon:hover{
+.main-menu > li.search-icon:hover{
     color: #ffffff;
 }
-.btn_orange{
+.btn-orange, .main-menu > li.btn-orange{
     background: #ffa000;
     border-radius: 20px;
     color: #ffffff;
@@ -120,7 +128,10 @@ nav ul{
     text-transform: none;
     border: none;
 }
-.btn_orange:hover{
+.main-menu > li.btn-orange{
+    margin-top: 10px;
+}
+.btn-orange:hover, .main-menu > li.btn-orange:hover{
     background: #ffffff;
     color: #234465;
 }
@@ -145,7 +156,7 @@ h1{
     font-weight: 700;
     font-size: 42px;
 }
-.title_wrapper{
+.title-wrapper{
     width: 100%;
     max-width: 550px;
     margin: 0 auto;
@@ -191,7 +202,7 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
     top: 80px;
     left: 20px;
 }
-.bubble_text{
+.bubble-text{
     display: inline-block;
     padding: 35px 70px 80px 70px;
     text-align: center;
@@ -200,23 +211,23 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
     bottom: 140px;
     left: 80px;
 }
-.bubble_text i{
+.bubble-text i{
     font-size: 180px;
     color: #ffffff;
     position: relative;
     bottom: 100px;
     z-index: -1;
 }
-#nag_text{
+#nag-text{
     z-index: 1;
 }
 .dirt{
     position: fixed;
     cursor: pointer;
 }
-.dirt_counter{
+.dirt-counter{
     position: fixed;
-    left: 47%;
+    left: calc((100vw / 2) - 50px);
     top: 15%;
     border-bottom-left-radius: 30px;
     border-top-right-radius: 30px;
@@ -227,7 +238,7 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
     transform: rotate(-20deg);
     display: none;
 }
-.fix_dirt_counter{
+.fix-dirt-counter{
     -webkit-transform: rotate(-20deg);
     transform: rotate(20deg);
 }
@@ -239,8 +250,31 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
     left: 200px;
     cursor: pointer;
 }
-.no_bullets{
+.no-bullets{
     list-style: none;
+}
+.menu-links{
+    margin-top: 6px;
+}
+.drop-down ul{
+    display: none;
+    position: absolute;
+    background: #234465;
+    border-top: 2px solid #236688;
+    min-width: 100px;
+    margin-top: 18px;
+}
+.drop-down li{
+    margin: 5px;
+}
+.drop-down li a{
+    text-decoration: none;
+}
+.drop-down li a:hover{
+    color: #ffffff;
+}
+.drop-down:focus ul{
+    display: block;
 }
 @-webkit-keyframes logo_left_anim {
     0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
@@ -311,16 +345,16 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
     }
 }
 @media screen and (max-width: 1200px) {
-    .logo_left, .logo_right{
+    .logo-left, .logo-right{
         background-image: url("https://softuni.bg/content/images/softuni-mobile-logo.png");
         width: 35px;
     }
-    .logo_right{
+    .logo-right{
         background-position-x: -35px;
     }
 }
 @media screen and (max-width: 990px) {
-    .menu_links{
+    .menu-links{
         display: none;
         margin: 14px auto auto;
         background: #234465;
@@ -329,58 +363,66 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
         position: absolute;
         right: -70px;
         border-top: 2px solid #236688;
-        min-width: 380px;
+        min-width: 320px;
     }
-    .menu_btn{
+    .menu-btn{
         margin-right: 20px;
     }
-    .fake_btn:first-of-type{
+    .drop-down:first-of-type{
         padding-left: 0;
     }
-    .logo_left, .logo_right{
+    .logo-left, .logo-right{
         background-image: url("https://softuni.bg/content/images/software-university-logo.png");
         width: 90px;
     }
-    .logo_right{
+    .logo-right{
         background-position-x: -90px;
     }
-    nav ul li:first-of-type{
+    .main-menu > li:first-of-type{
         float: right;
         padding: 0;
         margin-left: 20px;
         width: 30px;
     }
-    .fake_btn:first-of-type{
+    .drop-down:first-of-type{
         margin-left: 20px;
     }
-    nav ul li:first-of-type:hover .menu_links{
+    .main-menu > li:first-of-type:hover .menu-links{
         display: block;
     }
-    nav ul li:first-of-type:hover{
-        padding-bottom: 40px;
+    .main-menu > li:first-of-type:hover{
+        padding-bottom: 14px;
     }
-    .menu_btn{
+    .menu-btn{
         display: inline-block;
     }
-    nav ul li:first-of-type:before{
+    .main-menu > li:first-of-type:before{
         font-family: FontAwesome, sans-serif;
         content: "\f0c9";
         font-size: 30px;
     }
 
-    nav ul{
+    .main-menu{
         position: relative;
         bottom: 5px;
         margin-top: 15px;
-
+    }
+    .main-menu > li.btn-orange, .main-menu > li.search-icon, .main-menu > li:first-of-type{
+        margin-top: 5px;
+    }
+    .drop-down ul{
+        margin-top: 10px;
+    }
+    .menu-links > li{
+        padding: 0 5px 0 10px;
     }
 }
 @media screen and (max-width: 525px) {
-    .logo_left, .logo_right{
+    .logo-left, .logo-right{
         background-image: url("https://softuni.bg/content/images/softuni-mobile-logo.png");
         width: 35px;
     }
-    .logo_right{
+    .logo-right{
         background-position-x: -35px;
     }
     header li{
@@ -391,22 +433,49 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
     .portal{
         top: 70px;
     }
-    .menu_btn{
+    .main-menu .menu-btn, .drop-down li, .drop-down li a{
         display: block;
         font-size: 18px;
         margin: 0;
         padding: 0;
     }
 
-    .fake_btn:first-of-type{
+    .drop-down:first-of-type{
         margin-left: 0;
+    }
+    .drop-down ul{
+        position: static;
+        border-bottom: 2px solid #236688;
+    }
+    .drop-down:after{
+        display: none;
+    }
+    .drop-down:before{
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        border-top: 5px solid #aab2bc;
+        border-bottom: none;
+        content: "";
+        position: relative;
+        margin-right: 10px;
+        top: 15px;
     }
 }
 @media screen and (max-width: 380px){
-    .menu_links{
-        right: calc(-(100vw - 298px));
+    .menu-links{
+        right: calc(-1 * (100vw - 284px));
     }
-    nav ul{
+    .main-menu{
         margin-right: calc(100vw - 320px);
+    }
+}
+@media screen and (max-width: 320px){
+    .main-menu{
+        float: none;
+    }
+}
+@media screen and (min-width: 991px){
+    .drop-down:hover{
+        padding-bottom: 20px;
     }
 }

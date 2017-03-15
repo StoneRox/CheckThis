@@ -10,24 +10,24 @@
 </head>
 <body>
 <nav id="nav_bar">
-    <div class="logo" onclick="nagging()">
-        <div class="logo_left"></div>
-        <div class="logo_right"></div>
+    <div class="logo" tabindex="0" onclick="nagging()">
+        <div class="logo-left"></div>
+        <div class="logo-right"></div>
     </div>
-    <ul class="no-bullets">
-        <li onclick="">
-            <div class="menu_links">
-                <span class="fake_btn menu_btn">Софтуни</span>
-                <span class="fake_btn menu_btn">Обучения</span>
-                <span class="menu_btn" onclick="getWork()">Работа</span>
-                <span class="menu_btn">Партньори</span>
-                <span class="menu_btn">Форум</span>
-                <span class="menu_btn">Блог</span>
-                <span class="menu_btn">Контакти</span>
-            </div>
+    <ul class="no-bullets main-menu">
+        <li tabindex="0">
+            <ul class="menu-links">
+                <li tabindex="0" class="drop-down menu-btn">Софтуни<ul class="no-bullets"><li><a href="#">Test drop-down</a></li><li>Is it working?</li></ul></li>
+                <li tabindex="0" class="drop-down menu-btn">Обучения</li>
+                <li tabindex="0" class="menu-btn" onclick="getWork()">Работа</li>
+                <li tabindex="0" class="menu-btn">Партньори</li>
+                <li tabindex="0" class="menu-btn">Форум</li>
+                <li tabindex="0" class="menu-btn">Блог</li>
+                <li tabindex="0" class="menu-btn drop-down">Контакти<ul class="no-bullets"><li><a href="#">Test drop-down</a></li><li>Is it working?</li></ul></li>
+            </ul>
         </li>
-        <li class="search_icon"><i class="fa fa-search" aria-hidden="true"></i></li>
-        <li class="btn_orange" onclick="
+        <li tabindex="0" class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></li>
+        <li tabindex="0" class="btn-orange" onclick="
         header.style.transform='rotateX(-90deg)';
         document.getElementById('portal').style.display='block';
         setTimeout(function() {
@@ -41,16 +41,16 @@
         </li>
     </ul>
 </nav>
-<div class="dirt_counter" id="dirt_Counter">
-    <div class="fix_dirt_counter">Петна: <span id="dirt_spots_left">0</span></div>
+<div class="dirt-counter" id="dirt_Counter">
+    <div class="fix-dirt-counter">Петна: <span id="dirt_spots_left">0</span></div>
 </div>
-<header id="header" class="background" onclick="">
-    <div class="title_wrapper">
+<header id="header" class="background">
+    <div class="title-wrapper">
         <h1>Достъпно и качествено софтуерно образование</h1>
     </div>
-    <div class="header_btns">
-        <ul class="no_bullets">
-            <li class="btn_orange">Кандидатствай!</li>
+    <div class="header-btns">
+        <ul class="no-bullets">
+            <li class="btn-orange">Кандидатствай!</li>
             <li>Учебен план</li>
             <li>За СофтУни</li>
         </ul>
@@ -58,7 +58,7 @@
 </header>
 <div class="bubble" id="nag">
     <img class="avatar" src="https://softuni.bg/Files/UserFiles/ImageGallery/svetlin_nakov-trainers.jpg" alt="">
-    <div class="bubble_text">
+    <div class="bubble-text">
         <div id="nag_text"></div>
         <i class="fa fa-comment" aria-hidden="true"></i>
     </div>
