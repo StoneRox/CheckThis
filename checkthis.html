@@ -15,18 +15,18 @@
         <div class="logo-right"></div>
     </div>
     <ul class="no-bullets main-menu">
-        <li tabindex="0">
+        <li tabindex="0" onclick="">
             <ul class="menu-links">
-                <li tabindex="0" class="drop-down menu-btn">Софтуни<ul class="no-bullets"><li><a href="#">Test drop-down</a></li><li>Is it working?</li></ul></li>
-                <li tabindex="0" class="drop-down menu-btn">Обучения</li>
+                <li tabindex="0" class="drop-down menu-btn" onclick="">Софтуни<ul class="no-bullets"><li><a href="#">Test drop-down</a></li><li>Is it working?</li></ul></li>
+                <li tabindex="0" class="drop-down menu-btn" onclick="">Обучения</li>
                 <li tabindex="0" class="menu-btn" onclick="getWork()">Работа</li>
                 <li tabindex="0" class="menu-btn">Партньори</li>
-                <li tabindex="0" class="menu-btn">Форум</li>
-                <li tabindex="0" class="menu-btn">Блог</li>
-                <li tabindex="0" class="menu-btn drop-down">Контакти<ul class="no-bullets"><li><a href="#">Test drop-down</a></li><li>Is it working?</li></ul></li>
+                <li tabindex="0" class="menu-btn" onclick="">Форум</li>
+                <li tabindex="0" class="menu-btn" onclick="">Блог</li>
+                <li tabindex="0" class="menu-btn drop-down" onclick="">Контакти<ul class="no-bullets"><li><a href="#">Test drop-down</a></li><li>Is it working?</li></ul></li>
             </ul>
         </li>
-        <li tabindex="0" class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></li>
+        <li tabindex="0" class="search-icon" onclick=""><i class="fa fa-search" aria-hidden="true"></i></li>
         <li tabindex="0" class="btn-orange" onclick="
         header.style.transform='rotateX(-90deg)';
         document.getElementById('portal').style.display='block';
@@ -44,7 +44,7 @@
 <div class="dirt-counter" id="dirt_Counter">
     <div class="fix-dirt-counter">Петна: <span id="dirt_spots_left">0</span></div>
 </div>
-<header id="header" class="background">
+<header id="header" class="background" onclick="">
     <div class="title-wrapper">
         <h1>Достъпно и качествено софтуерно образование</h1>
     </div>

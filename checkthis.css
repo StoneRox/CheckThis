@@ -463,7 +463,7 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
 }
 @media screen and (max-width: 380px){
     .menu-links{
-        right: calc(-1 * (100vw - 284px));
+        right: calc(-1 * (100vw - 310px));
     }
     .main-menu{
         margin-right: calc(100vw - 320px);
