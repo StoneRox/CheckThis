@@ -132,6 +132,7 @@ function CheckForApples() {
             }
         }
         if(os.indexOf('OS') != -1){
+
             let d = document.createElement('div');
             let ap = document.createElement('img');
             ap.setAttribute('src', 'apple.jpg');
