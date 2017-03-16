@@ -309,18 +309,18 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
 .apple-greetings-img{
     width: 320px;
     position: relative;
-    top: calc(100vh / 2 - 145px);
+    top: calc(100vh / 2 - 260px);
 }
 .apple-greetings-text{
     color: white;
     position: relative;
-    top: calc(100vh / 2 - 145px);
+    top: calc(100vh / 2 - 260px);
     margin: auto;
     width: 320px;
 }
 .apple-greetings-button{
     position: relative;
-    top: calc(100vh / 2 - 135px);
+    top: calc(100vh / 2 - 250px);
     border-radius: 5px;
     padding: 3px 10px;
     border: 2px solid #ff4500;

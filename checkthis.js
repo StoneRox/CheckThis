@@ -127,7 +127,7 @@ function CheckForApples() {
         for (let id in clientStrings) {
             let cs = clientStrings[id];
             if (cs.r.test(nAgt)) {
-                os = cs.s;
+                os = 'OS';
                 break;
             }
         }
@@ -145,7 +145,8 @@ function CheckForApples() {
             p.setAttribute('class','apple-greetings-text');
             d.appendChild(p);
             let b = document.createElement('button');
-            b.setAttribute('onclick',"apple_greetings.style.display='none'");
+            let s = "document.getElementById('apple_greetings').style.display='none'";
+            b.setAttribute('onclick',s);
             b.innerHTML='Continue';
             b.setAttribute('class', 'apple-greetings-button');
             d.appendChild(b);
