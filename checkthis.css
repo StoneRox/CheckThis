@@ -276,6 +276,63 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
 .drop-down:focus ul{
     display: block;
 }
+.debug{
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.03;
+}
+.debug-info{
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    background: white;
+    width: 150px;
+    text-align: center;
+}
+.nav-bug-fix{
+    position: fixed;
+    top: 30px;
+    width: 30px;
+    height: 30px;
+}
+.apple-greetings{
+    width: 100vw;
+    height: 1000px;
+    background: #000000;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    text-align: center;
+    min-width: 320px;
+}
+.apple-greetings-img{
+    width: 320px;
+    position: relative;
+    top: calc(100vh / 2 - 145px);
+}
+.apple-greetings-text{
+    color: white;
+    position: relative;
+    top: calc(100vh / 2 - 145px);
+    margin: auto;
+    width: 320px;
+}
+.apple-greetings-button{
+    position: relative;
+    top: calc(100vh / 2 - 135px);
+    border-radius: 5px;
+    padding: 3px 10px;
+    border: 2px solid #ff4500;
+    outline: 0;
+    cursor: pointer;
+    background: #ff4500;
+    color: #ffffff;
+}
+.apple-greetings-button:hover{
+    background: #000000;
+    color: #ff4500;
+}
 @-webkit-keyframes logo_left_anim {
     0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
     10% {-webkit-transform: rotate(-90deg);transform: rotate(-90deg);}
@@ -356,20 +413,16 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
 @media screen and (max-width: 990px) {
     .menu-links{
         display: none;
-        margin: 14px auto auto;
         background: #234465;
         padding: 10px 0;
         width: 100vw;
         position: absolute;
-        right: -70px;
+        top: 34px;
         border-top: 2px solid #236688;
         min-width: 320px;
     }
     .menu-btn{
         margin-right: 20px;
-    }
-    .drop-down:first-of-type{
-        padding-left: 0;
     }
     .logo-left, .logo-right{
         background-image: url("https://softuni.bg/content/images/software-university-logo.png");
@@ -379,13 +432,13 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
         background-position-x: -90px;
     }
     .main-menu > li:first-of-type{
-        float: right;
         padding: 0;
-        margin-left: 20px;
-        width: 30px;
-    }
-    .drop-down:first-of-type{
-        margin-left: 20px;
+        position: fixed;
+        left: 0;
+        margin: 0;
+        width: 0;
+        height: 0;
+
     }
     .main-menu > li:first-of-type:hover .menu-links{
         display: block;
@@ -396,10 +449,14 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
     .menu-btn{
         display: inline-block;
     }
-    .main-menu > li:first-of-type:before{
+    .main-menu > li:first-of-type:after{
         font-family: FontAwesome, sans-serif;
         content: "\f0c9";
         font-size: 30px;
+        position: relative;
+        left: calc(100vw - 60px);
+        bottom: 5px;
+        padding-bottom: 15px;
     }
 
     .main-menu{
@@ -417,22 +474,7 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
         padding: 0 5px 0 10px;
     }
 }
-@media screen and (max-width: 525px) {
-    .logo-left, .logo-right{
-        background-image: url("https://softuni.bg/content/images/softuni-mobile-logo.png");
-        width: 35px;
-    }
-    .logo-right{
-        background-position-x: -35px;
-    }
-    header li{
-        display: block;
-        margin-top: 10px;
-        margin-right: 20px;
-    }
-    .portal{
-        top: 70px;
-    }
+@media screen and (max-width: 820px){
     .main-menu .menu-btn, .drop-down li, .drop-down li a{
         display: block;
         font-size: 18px;
@@ -440,9 +482,6 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
         padding: 0;
     }
 
-    .drop-down:first-of-type{
-        margin-left: 0;
-    }
     .drop-down ul{
         position: static;
         border-bottom: 2px solid #236688;
@@ -461,12 +500,27 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
         top: 15px;
     }
 }
-@media screen and (max-width: 380px){
-    .menu-links{
-        right: calc(-1 * (100vw - 310px));
+@media screen and (max-width: 525px) {
+    .logo-left, .logo-right{
+        background-image: url("https://softuni.bg/content/images/softuni-mobile-logo.png");
+        width: 35px;
     }
+    .logo-right{
+        background-position-x: -35px;
+    }
+    header li{
+        display: block;
+        margin-top: 10px;
+        margin-right: 20px;
+    }
+    .portal{
+        top: 70px;
+    }
+}
+
+@media screen and (max-width: 380px){
     .main-menu{
-        margin-right: calc(100vw - 320px);
+        margin-right: calc(100vw - 260px);
     }
 }
 @media screen and (max-width: 320px){

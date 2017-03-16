@@ -113,3 +113,49 @@ function clean(id) {
 function RandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+function CheckForApples() {
+
+        let nAgt = window.navigator.userAgent;
+        let os = 'Not Apple';
+        let clientStrings = [
+            {s:'iOS', r:/(iPhone|iPad|iPod)/},
+            {s:'Mac OS X', r:/Mac OS X/},
+            {s:'Mac OS', r:/(MacPPC|MacIntel|Mac_PowerPC|Macintosh)/},
+            {s:'OS/2', r:/OS\/2/},
+        ];
+        for (let id in clientStrings) {
+            let cs = clientStrings[id];
+            if (cs.r.test(nAgt)) {
+                os = cs.s;
+                break;
+            }
+        }
+        if(os.indexOf('OS') != -1){
+            let d = document.createElement('div');
+            let ap = document.createElement('img');
+            ap.setAttribute('src', 'apple.jpg');
+            ap.setAttribute('class','apple-greetings-img');
+            d.setAttribute('class','apple-greetings');
+            d.appendChild(ap);
+            d.setAttribute('id','apple_greetings');
+            let p = document.createElement('p');
+            p.innerHTML = 'If you still want to continue click on the button below but if you see bugs you were warned.';
+            p.setAttribute('class','apple-greetings-text');
+            d.appendChild(p);
+            let b = document.createElement('button');
+            b.setAttribute('onclick',"apple_greetings.style.display='none'");
+            b.innerHTML='Continue';
+            b.setAttribute('class', 'apple-greetings-button');
+            d.appendChild(b);
+            document.body.appendChild(d);
+        }
+    }
+function debugging() {
+        if(debug.checked==true){
+            debug_info.innerHTML = 'h: ' + window.innerHeight + ' w: ' + window.innerWidth;
+        }
+        else {
+            debug_info.innerHTML = '';
+        }
+    }
