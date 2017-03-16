@@ -1,5 +1,7 @@
 let nagHiding = false;
 function nagging() {
+    let nag_text = document.getElementById('nag_text');
+    let nag = document.getElementById('nag');
     let nagText = nag_text.innerHTML;
     if(nagText==''){
         nagText='Какво направи пак?';
@@ -24,6 +26,8 @@ function nagging() {
 }
 function hideNagBuble(save) {
     if(!nagHiding){
+        let nag = document.getElementById('nag');
+        let nag_text = document.getElementById('nag_text');
         nagHiding = true;
         setTimeout(function () {
             nag.style.opacity='0';
@@ -72,6 +76,9 @@ function getWork() {
         }
 
     }
+    let nag_text = document.getElementById('nag_text');
+    let nag = document.getElementById('nag');
+    let dirt_spots_left = document.getElementById('dirt_spots_left');
     let saveNag = nag_text.innerHTML;
     nag_text.innerHTML = "Нали искаш работа? Ето изчисти!";
     nag.style.display = 'block';
@@ -82,6 +89,7 @@ function getWork() {
     dirt_spots_left.innerHTML = spots;
     if(spots*5 > 220){spots = 44;}
     let green = 221-spots*5;
+    let dirt_Counter = document.getElementById('dirt_Counter');
     dirt_Counter.style.background = `rgba(200 ,${green},0, 0.5)`;
     if(dirt_Counter.style.display!='block'){
         dirt_Counter.style.display='block';
@@ -90,10 +98,13 @@ function getWork() {
 function clean(id) {
     let elem = document.getElementById(id);
     elem.parentNode.removeChild(elem);
+    let dirt_spots_left = document.getElementById('dirt_spots_left');
     let spots = parseInt(dirt_spots_left.innerHTML);
     dirt_spots_left.innerHTML = spots-1;
     if(spots-1 == 0){
+        let dirt_Counter = document.getElementById('dirt_Counter');
         dirt_Counter.style.display='none';
+        let nag_text = document.getElementById('nag_text');
         let saveNag = nag_text.innerHTML;
         nag_text.innerHTML = "Браво! Бисквитка?";
         let prize = document.createElement('img');
@@ -103,11 +114,13 @@ function clean(id) {
         document.body.appendChild(prize);
         prize.style.top=`${RandomInt(10,70)}vh`;
         prize.style.left=`${RandomInt(10,70)}vw`;
+        let nag = document.getElementById('nag');
         nag.style.display = 'block';
         hideNagBuble(saveNag);
     }
     if(spots*5 > 220){spots = 44;}
     let green = 221-spots*5;
+    let dirt_Counter = document.getElementById('dirt_Counter');
     dirt_Counter.style.background = `rgba(200,${green},0, 0.5)`;
 }
 function RandomInt(min, max) {
@@ -154,6 +167,8 @@ function CheckForApples() {
         }
     }
 function debugging() {
+        let debug = document.getElementById('debug');
+        let debug_info = document.getElementById('debug_info');
         if(debug.checked==true){
             debug_info.innerHTML = 'h: ' + window.innerHeight + ' w: ' + window.innerWidth;
         }
@@ -161,3 +176,13 @@ function debugging() {
             debug_info.innerHTML = '';
         }
     }
+function dropdown(menu_head) {
+    menu_head = menu_head.childNodes[1];
+    if(menu_head.style.display=="block"){
+
+        menu_head.style.display="none";
+
+    }
+    else {menu_head.style.display="block";
+        console.log(menu_head.tagName+2);}
+}
