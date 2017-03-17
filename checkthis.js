@@ -178,11 +178,5 @@ function debugging() {
     }
 function dropdown(menu_head) {
     menu_head = menu_head.childNodes[1];
-    if(menu_head.style.display=="block"){
-
-        menu_head.style.display="none";
-
-    }
-    else {menu_head.style.display="block";
-        console.log(menu_head.tagName+2);}
+    menu_head.style.display=="block" ? menu_head.style.display="none" : menu_head.style.display="block";
 }

@@ -23,16 +23,17 @@
                 <li tabindex="0" class="menu-btn">Партньори</li>
                 <li tabindex="0" class="menu-btn" onclick="">Форум</li>
                 <li tabindex="0" class="menu-btn" onclick="">Блог</li>
-                <li tabindex="0" class="menu-btn" onclick="document.getElementById('contracts_frame').style.display='block';">Контакти</li>
+                <li tabindex="0" class="menu-btn" onclick="document.getElementById('contacts_frame_container').style.display='block'; document.getElementById('contacts_frame').setAttribute('src','https://vikiwat.com/elektricheski-kontakt.html');">Контакти</li>
             </ul>
         </li>
-        <li tabindex="0" class="search-icon" onclick=""><i class="fa fa-search" aria-hidden="true"></i></li>
+        <li tabindex="0" class="search-icon" onclick="window.location.href='http://google.com'"><i class="fa fa-search" aria-hidden="true"></i></li>
         <li tabindex="0" class="btn-orange" onclick="
         document.getElementById('header').style.transform='rotateX(-90deg)';
         document.getElementById('portal').style.display='block';
         setTimeout(function() {
           document.getElementById('header').style.animation='spiralHeader 5s';
           document.getElementById('nav_bar').style.animation='spiralNav 5s';
+          document.getElementById('window_crack').style.display='block';
         }, 2000);
         setTimeout(go, 6000);
         function go() {
@@ -45,9 +46,9 @@
     <div class="dirt-counter" id="dirt_Counter">
         <div class="fix-dirt-counter">Петна: <span id="dirt_spots_left">0</span></div>
     </div>
-    <div class="contacts-frame" id="contracts_frame">
-        <i class="fa fa-times close-frame" aria-hidden="true" onclick="document.getElementById('contracts_frame').style.display='none';"></i>
-        <iframe src="https://vikiwat.com/elektricheski-kontakt.html" frameborder="0" width="100%" height="100%"></iframe>
+    <div class="contacts-frame-container" id="contacts_frame_container">
+        <i class="fa fa-times close-frame" aria-hidden="true" onclick="document.getElementById('contacts_frame_container').style.display='none';"></i>
+        <iframe id="contacts_frame" src="" frameborder="0" width="100%" height="100%"></iframe>
     </div>
     <div class="title-wrapper">
         <h1>Достъпно и качествено софтуерно образование</h1>
@@ -72,6 +73,7 @@
 <input type="checkbox" class="debug" id="debug" onclick="debugging()"/>
 <div class="debug-info" id="debug_info"></div>
 <div class="nav-bug-fix"></div>
+<img id="window_crack" class="portal" src="glass_cracks.png" />
 <script>CheckForApples();</script>
 </body>
 </html>
