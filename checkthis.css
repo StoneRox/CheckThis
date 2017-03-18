@@ -367,6 +367,95 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
 .close-frame:hover{
     background: #ff0000;
 }
+.blog-list {
+    left: 300px;
+
+}
+.blog-list li {
+
+    border: 1px solid #aab2bc;
+    margin: 10px auto;
+    text-transform: none;
+    color: #234465;
+    background: #eaeaea;
+    border-radius: 5px;
+    padding: 10px;
+}
+.drop-down .blog-list a {
+    color: #ffa000;
+
+}
+.drop-down:hover .blog-list li p {
+    color: #234465;
+}
+
+
+.partners-list {
+    left: 40px;
+
+}
+.partners-list li {
+    display: inline-block;
+    margin: 10px;
+}
+.forum-list {
+    left: 20px;
+    background: #234465;
+}
+.question {
+    border: 1px solid #aab2bc;
+    margin: 10px auto;
+    text-transform: none;
+    color: #234465;
+    background: #eaeaea;
+    border-radius: 5px;
+}
+.question div {
+    display: block;
+}
+.question-intro p {
+    display: inline-block;
+    width: 40%;
+}
+p.category {
+    text-align: left;
+    padding-top: 10px;
+    color: #ffa000;
+    font-weight: bold;
+}
+p.author {
+    text-align: right;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+.text {
+    margin-top: 20px;
+    text-align: left;
+    padding-left: 10px;
+}
+.drop-down:hover .text p, .drop-down:hover .author {
+    color: #234465;
+}
+.drop-down .reply button:hover {
+    background: #ffffff;
+    color: #ffa000;
+    cursor: pointer;
+}
+.drop-down .reed-more a:hover {
+    color: #ffa000;
+}
+.reply button {
+    background: #ffa000;
+    border-radius: 20px;
+    color: #ffffff;
+    padding: 5px 15px 5px 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+}
+.reed-more {
+    margin-bottom: 10px;
+}
 @-webkit-keyframes logo_left_anim {
     0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
     10% {-webkit-transform: rotate(-90deg);transform: rotate(-90deg);}
