@@ -388,11 +388,8 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
 .drop-down:hover .blog-list li p {
     color: #234465;
 }
-
-
 .partners-list {
     left: 40px;
-
 }
 .partners-list li {
     display: inline-block;
@@ -445,14 +442,20 @@ p.author {
 .drop-down:hover .text p, .drop-down:hover .author {
     color: #234465;
 }
-.drop-down .reply button:hover {
-    background: #ffffff;
+.drop-down .reply button {
+    background: transparent;
+    border: 1px solid #ffa000;
     color: #ffa000;
     cursor: pointer;
 }
-.drop-down .reed-more a:hover {
+.drop-down .reply button:hover {
+    background: #ffa000;
+    color: #234465;
+}
+.drop-down .reed-more a {
     color: #ffa000;
 }
+
 .reply button {
     background: #ffa000;
     border-radius: 20px;
@@ -479,11 +482,12 @@ p.author {
 }
 main {
     background: #234465;
+    padding: 10px 0;
 }
 article.site-info {
     color: #737373;
     width: 80vw;
-    margin: 0 auto;
+    margin: 10px auto;
     background: #ffffff;
     padding: 30px;
     border: 2px solid #213350;
