@@ -18,7 +18,7 @@
         <li onclick="">
             <ul class="menu-links">
                 <li tabindex="0" class="drop-down menu-btn" onclick="dropdown(this);">Софтуни<ul class="no-bullets softuni-list"><li> <a href="#softuni-info">Научете повече за СофтУни</a></li><li><a href="#our-site-info">Какъв е този странен сайт?</a></li></ul></li>
-                <li tabindex="0" class="drop-down menu-btn" onclick="">Обучения</li>
+                <li tabindex="0" class="drop-down menu-btn" onclick="dropdown(this)">Обучения<ul class="no-bullets"><li><a href="#skills">На какво може да ни научи СофтУни?</a></li><li><a href="#test_subject">Искам и аз да се науча!</a></li></ul></li>
                 <li tabindex="0" class="menu-btn" onclick="getWork()">Работа</li>
                 <li tabindex="0" class=" drop-down menu-btn" onclick="dropdown(this);">Партньори<ul class="partners-list no-bullets"><li><a href="http://kfc.bg/">KFC</a></li><li><a href="http://mcdonalds.bg">Mcdonalds</a></li><li><a href="http://starbucks.bg">Starbucks</a></li><li><a href="http://www.vasilka.com/Bulgarska_versija/main.htm">"Василка"</a></li><li><a href="https://www.omv.bg/portal/01/bg/omv_bg/Home">OMV</a></li><li><a href="https://wolf-bulgaria.alle.bg/">Волф</a></li><li><a href="http://hamali-lux.com/">Хамали</a></li></ul></li>
                 <li tabindex="0" class="drop-down menu-btn" onclick="dropdown(this);">Форум<ul class="forum-list no-bullets"><li class="question"><div class="question-intro"><p class="category"><i class="fa fa-clipboard" aria-hidden="true"></i>Softuni</p><p class="author"><i class="fa fa-user" aria-hidden="true"></i>Anonymous</p></div><div class="text"><p>Здравейте, защо не мога да гледам видеата от платените курсове, за които не съм се записала? Това е много нечестно!!!!</p></div><div class="reply"><button>Reply</button></div><div class="reed-more"><a href="https://softuni.bg/forum/categories/3/vyprosi-za-softuni">Прочетете още</a></div></li><li class="question"><div class="question-intro"><p class="category"><i class="fa fa-clipboard" aria-hidden="true"></i>Web Basics</p><p class="author"><i class="fa fa-user" aria-hidden="true"></i>Anonymous</p></div><div class="text"><p>Здравейте, бихте ли ми казалали дали минималната заплата на уебдизайнерите е поне 3000лв? Обмислям за запиша този курс, но се чудя има ли смисъл? Мерси</p></div><div class="reply"><button>Reply</button></div><div class="reed-more"><a href="https://softuni.bg/forum/categories/68/web-basics">Прочетете още</a> </div></li><li class="question"><div class="question-intro"><p class="category"><i class="fa fa-clipboard" aria-hidden="true"></i>Technology Fundamentals</p><p class="author"><i class="fa fa-user" aria-hidden="true"></i>Anonymous</p></div><div class="text"><p>Здравейте, можете ли да дадете някакви съвети за бързо правене на сайтове? Да стават бързо и да са красиви, и да има разни яки анимации, и да работят на всички устройства. Много искам да правя сайтове, но нямам време да вися по цял ден пред компа? Мерси</p></div><div class="reply"><button>Reply</button></div><div class="reed-more"><a href="https://softuni.bg/forum/categories/24/technology-fundamentals">Прочетете още</a> </div></li><li class="question"><div class="question-intro"><p class="category"><i class="fa fa-clipboard" aria-hidden="true"></i>Programming Basics</p><p class="author"><i class="fa fa-user" aria-hidden="true"></i>Anonymous</p></div><div class="text"><p>Привет, някой може ли да качи решенията на последните задачи? Или направо на всичките, аз съм много заета да ги пиша сама?</p></div><div class="reply"><button>Reply</button></div><div class="reed-more"><a href="https://softuni.bg/forum/categories/2/osnovi-na-programiraneto">Прочетете още</a></div></li></ul></li>
@@ -47,8 +47,8 @@
         <div class="fix-dirt-counter">Петна: <span id="dirt_spots_left">0</span></div>
     </div>
     <div class="contacts-frame-container" id="contacts_frame_container">
-        <i class="fa fa-times close-frame" aria-hidden="true" onclick="document.getElementById('contacts_frame_container').style.display='none';"></i>
-        <iframe id="contacts_frame" src="" frameborder="0" width="100%" height="100%"></iframe>
+        <i class="fa fa-times close-frame" aria-hidden="true" onclick="document.getElementById('contacts_frame_container').style.display='none';document.getElementById('contacts_frame').setAttribute('src','');"></i>
+        <iframe id="contacts_frame" src="" frameborder="0"></iframe>
     </div>
     <div class="title-wrapper">
         <h1>Достъпно и качествено софтуерно образование</h1>
@@ -74,6 +74,17 @@
         <p>Този сайт е съзададен изцяло с учебна цел, като част от курса Web Basics 2017 в <span>СофтУни</span>. Целта е да се покаже наученото по време на курса. Автори са Петър Петров, Васил Даскалов и Наталия Бенова-Уолш. Ние сме пример за успешния начин на преподаване в <span>СофтУни</span>.</p>
         <p>Всички прилики и разлики с оригиналния сайт са нарочно търсени.</p>
     </article>
+    <div id="skills">
+        <div class="skills-info">
+            <h3>На какво може да ни научи СофтУни?</h3>
+            <p>СофтУни може да Ви научи да разбирате и владеете оргомния и безспирно растящ свят на софтуера. СофтУни ще Ви помогне да се трансформирате от потребител в господар на компютрите. За да се уверите сами, натиснете <a href="#enter">бутона</a> "Вход" и разгледайте.</p>
+        </div>
+        <div class="experiment">
+            <h3>Опитно поле</h3>
+            <div id="test_subject" class="none"></div>
+            <button id="test_button" onclick="experiment();">Натисни тук!</button>
+        </div>
+    </div>
 <div class="bubble" id="nag">
     <img class="avatar" src="https://softuni.bg/Files/UserFiles/ImageGallery/svetlin_nakov-trainers.jpg" alt="">
     <div class="bubble-text">
