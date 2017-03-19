@@ -27,7 +27,7 @@
             </ul>
         </li>
         <li tabindex="0" class="search-icon" onclick="window.location.href='http://google.com'"><i class="fa fa-search" aria-hidden="true"></i></li>
-        <li tabindex="0" class="btn-orange" onclick="
+        <li tabindex="0" class="btn-orange" id="enter" onclick="
         document.getElementById('header').style.transform='rotateX(-90deg)';
         document.getElementById('portal').style.display='block';
         setTimeout(function() {
@@ -48,7 +48,7 @@
     </div>
     <div class="contacts-frame-container" id="contacts_frame_container">
         <i class="fa fa-times close-frame" aria-hidden="true" onclick="document.getElementById('contacts_frame_container').style.display='none';document.getElementById('contacts_frame').setAttribute('src','');"></i>
-        <iframe id="contacts_frame" src="" frameborder="0"></iframe>
+        <iframe id="contacts_frame" src="" frameborder="0" height="100%" width="100%"></iframe>
     </div>
     <div class="title-wrapper">
         <h1>Достъпно и качествено софтуерно образование</h1>
@@ -92,6 +92,7 @@
         <i class="fa fa-comment" aria-hidden="true"></i>
     </div>
 </div>
+</main>
 <audio src="eat_cookie.wav" id="eat_cookie"></audio>
 <img id="portal" src="whirlpool.gif" alt="" class="portal" >
 <input type="checkbox" class="debug" id="debug" onclick="debugging()"/>
@@ -99,8 +100,5 @@
 <div class="nav-bug-fix"></div>
 <img id="window_crack" class="portal" src="glass_cracks.png" />
 <script>CheckForApples();</script>
-
-
-</main>
 </body>
 </html>
