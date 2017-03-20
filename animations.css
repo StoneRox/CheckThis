@@ -1,0 +1,169 @@
+@-webkit-keyframes roll {
+    0%{-webkit-transform: rotate(0deg) skew(0deg);}
+    11.1%{-webkit-transform: rotate(0deg) skew(40deg);}
+    22.1%{-webkit-transform: rotate(-90deg) skew(0deg);}
+    33.1%{-webkit-transform: rotate(0deg) skew(40deg);}
+    44.1%{-webkit-transform: rotate(0deg) skew(0deg);transform-origin: bottom left;}
+    55.1%{-webkit-transform-origin: bottom right;}
+    66.1%{-webkit-transform: rotate(0deg) skew(-40deg); }
+    77.1%{-webkit-transform: rotate(90deg) skew(0deg);}
+    88.1%{-webkit-transform: rotate(0deg) skew(-40deg);}
+    100%{-webkit-transform: rotate(0deg) skew(0deg); transform-origin: bottom right;}
+}
+@keyframes roll {
+    0%{transform: rotate(0deg) skew(0deg);}
+    11.1%{transform: rotate(0deg) skew(40deg);}
+    22.1%{transform: rotate(-90deg) skew(0deg);}
+    33.1%{transform: rotate(0deg) skew(40deg);}
+    44.1%{transform: rotate(0deg) skew(0deg);transform-origin: bottom left;}
+    55.1%{transform-origin: bottom right;}
+    66.1%{transform: rotate(0deg) skew(-40deg); }
+    77.1%{transform: rotate(90deg) skew(0deg);}
+    88.1%{transform: rotate(0deg) skew(-40deg);}
+    100%{transform: rotate(0deg) skew(0deg); transform-origin: bottom right;}
+}
+@-webkit-keyframes ball {
+    0%{left: 0;-webkit-box-shadow: 110px 20px 14px -10px rgba(50,50,50, 0.5);}
+    20%{left: 100px;-webkit-box-shadow: 10px 0 14px 0 rgba(50,50,50, 0.5);}
+    60%{left: -100px;-webkit-box-shadow: 220px 40px 14px -20px rgba(50,50,50, 0.5);}
+    100%{left: 100px;-webkit-box-shadow: 10px 20px 14px -10px rgba(50,50,50, 0.5);}
+}
+@keyframes ball {
+    0%{left: 0;box-shadow: 110px 20px 14px -10px rgba(50,50,50, 0.5);}
+    20%{left: 100px;box-shadow: 10px 0 14px 0 rgba(50,50,50, 0.5);}
+    60%{left: -100px;box-shadow: 220px 40px 14px -20px rgba(50,50,50, 0.5);}
+    100%{left: 100px;box-shadow: 10px 20px 14px -10px rgba(50,50,50, 0.5);}
+}
+@-webkit-keyframes circle {
+    0%{border: 2px solid; border-radius: 0;}
+    10%{border-bottom: 5px solid; border-radius: 0 0 0 50%}
+    20%{border-bottom: 5px solid; border-left: 5px solid; border-radius: 50% 0 0 50%}
+    30%{
+        border-bottom: 5px solid;
+        border-left: 5px solid;
+        border-top: 5px solid;
+        border-radius: 50% 50% 0 50%}
+    40%{border: 5px solid; border-radius: 50%}
+    50%{ border: 50px solid; border-radius: 50%; }
+    50%{border: 50px solid;background: none;
+        border-left: 0;
+        border-right: 0;
+    }
+    55%{background: radial-gradient(red 0% ,yellow 15%, skyblue 30%);}
+    60%{border: 20px solid; border-radius: 50%;
+        border-left: 0;
+        border-right: 0;
+        -webkit-transform: rotate(0deg);
+    }
+    80%{border: 20px solid; border-radius: 50%;
+        border-left: 0;
+        border-right: 0;
+        background: radial-gradient(red 0% ,yellow 15%, skyblue 30%);
+        -webkit-transform: rotate(1800deg);}
+    100%{
+        border: 20px solid; border-radius: 50%;
+        border-left: 0;
+        border-right: 0;
+        background: radial-gradient(red 0% ,yellow 15%, skyblue 30%);
+        -webkit-transform: rotate(0deg);
+    }
+}
+@keyframes circle {
+    0%{border: 2px solid; border-radius: 0;}
+    10%{
+        border-bottom: 5px solid;
+        border-radius: 0 0 0 50%}
+    20%{
+        border-bottom: 5px solid;
+        border-left: 5px solid;
+        border-radius: 50% 0 0 50%}
+    30%{
+        border-bottom: 5px solid;
+        border-left: 5px solid;
+        border-top: 5px solid;
+        border-radius: 50% 50% 0 50%}
+    40%{
+        border: 5px solid;
+        border-radius: 50%}
+    50%{ border: 50px solid; border-radius: 50%; }
+    50%{border: 50px solid;background: none;
+        border-left: 0;
+        border-right: 0;
+    }
+    55%{background: radial-gradient(red 0% ,yellow 15%, skyblue 30%);}
+    60%{border: 20px solid; border-radius: 50%;
+        border-left: 0;
+        border-right: 0;
+        transform: rotate(0deg);
+    }
+    80%{border: 20px solid; border-radius: 50%;
+        border-left: 0;
+        border-right: 0;
+
+        transform: rotate(1800deg);}
+    100%{
+        border: 20px solid; border-radius: 50%;
+        border-left: 0;
+        border-right: 0;
+        background: radial-gradient(red 0% ,yellow 15%, skyblue 30%);
+        transform: rotate(0deg);
+    }
+}
+@-webkit-keyframes sun {
+    from{background-size: 400%; background-position: 0 0;}
+    to{background-size: 50%; background-position: -50px -50px;}
+}
+@keyframes sun {
+    from{background-size: 400%; background-position: 0 0;}
+    to{background-size: 50%; background-position: -50px -50px;}
+}
+@-webkit-keyframes logo_left_anim {
+    0% {-webkit-transform: rotate(0deg);}
+    10% {-webkit-transform: rotate(-90deg);}
+    20% {-webkit-transform: rotate(-90deg);}
+    100% {-webkit-transform: rotate(0deg);}
+}
+@keyframes logo_left_anim {
+    0% {transform: rotate(0deg);}
+    10% {transform: rotate(-90deg);}
+    20% {transform: rotate(-90deg);}
+    100% {transform: rotate(0deg);}
+}
+@-webkit-keyframes logo_right_anim {
+    0% {-webkit-transform: rotate(0deg);}
+    10% {-webkit-transform: rotate(90deg);}
+    20% {-webkit-transform: rotate(90deg);}
+    100% {-webkit-transform: rotate(0deg);}
+}
+@keyframes logo_right_anim {
+    0% {transform: rotate(0deg);}
+    10% {transform: rotate(90deg);}
+    20% {transform: rotate(90deg);}
+    100% {transform: rotate(0deg);}
+}
+@-webkit-keyframes spiralNav{
+    from {-webkit-transform: rotate(0deg) translate(0px) scale(1);}
+    to {-webkit-transform: rotate(90deg) translate(150px) scale(0);}
+}
+@keyframes spiralNav{
+    from{transform: rotate(0deg) translate(0px) scale(1);}
+    to{transform: rotate(90deg) translate(150px) scale(0);}
+}
+@-webkit-keyframes spiralHeader{
+    0% {-webkit-transform: rotate(0deg) translate(0px) scale(1) rotateX(0deg);
+        background: url(https://softuni.bg/content/images/leadBG.jpg) no-repeat;
+        height: 600px; color: #ffffff;}
+    30%{-webkit-transform: rotate(0deg) translate(0px) scale(1) rotateX(-90deg);}
+    100% {-webkit-transform: rotate(90deg) translate(100px) scale(0) rotateX(-30deg);
+        background: url(https://softuni.bg/content/images/leadBG.jpg) no-repeat;
+        height: 600px;color: #ffffff;}
+}
+@keyframes spiralHeader{
+    0% {transform: rotate(0deg) translate(0px) scale(1) rotateX(0deg);
+        background: url(https://softuni.bg/content/images/leadBG.jpg) no-repeat;
+        height: 600px; color: #ffffff;}
+    30%{transform: rotate(0deg) translate(0px) scale(1) rotateX(-90deg);}
+    100% {transform: rotate(90deg) translate(100px) scale(0) rotateX(-30deg);
+        background: url(https://softuni.bg/content/images/leadBG.jpg) no-repeat;
+        height: 600px;color: #ffffff;}
+}

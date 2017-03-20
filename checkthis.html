@@ -6,6 +6,8 @@
     <title>SoftUni Upgrade</title>
     <link rel="stylesheet" href="checkthis.css">
     <script src="checkthis.js"></script>
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="responsive.css">
 
 </head>
 <body>
@@ -28,11 +30,10 @@
         </li>
         <li tabindex="0" class="search-icon" onclick="window.location.href='http://google.com'"><i class="fa fa-search" aria-hidden="true"></i></li>
         <li tabindex="0" class="btn-orange" id="enter" onclick="
-        document.getElementById('header').style.transform='rotateX(-90deg)';
+        document.getElementById('header').setAttribute('class','spiral-header');
+        document.getElementById('nav_bar').setAttribute('class','spiral-nav');
         document.getElementById('portal').style.display='block';
         setTimeout(function() {
-          document.getElementById('header').style.animation='spiralHeader 5s';
-          document.getElementById('nav_bar').style.animation='spiralNav 5s';
           document.getElementById('window_crack').style.display='block';
         }, 2000);
         setTimeout(go, 6000);
@@ -42,7 +43,7 @@
         </li>
     </ul>
 </nav>
-<header id="header" class="background" onclick="">
+<header id="header" onclick="">
     <div class="dirt-counter" id="dirt_Counter">
         <div class="fix-dirt-counter">Петна: <span id="dirt_spots_left">0</span></div>
     </div>

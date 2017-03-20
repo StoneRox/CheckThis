@@ -1,0 +1,94 @@
+@media screen and (max-width: 1200px) {
+    .logo-left, .logo-right{
+        background-image: url("https://softuni.bg/content/images/softuni-mobile-logo.png");
+        width: 35px;
+    }
+    .logo-right{background-position-x: -35px;}
+}
+@media screen and (max-width: 990px) {
+    .menu-links{
+        display: none;
+        background: #234465;
+        padding: 10px 0;
+        width: 100vw;
+        position: absolute;
+        top: 34px;
+        border-top: 2px solid #236688;
+        min-width: 320px;
+        right: -20px;
+    }
+    .menu-btn{margin-right: 20px;}
+    .logo-left, .logo-right{
+        background-image: url("https://softuni.bg/content/images/software-university-logo.png");
+        width: 90px;
+    }
+    .logo-right{
+        background-position-x: -90px;
+    }
+    .main-menu > li:first-of-type{
+        padding: 0;
+        position: absolute;
+        right: -40px;
+        margin: 0;
+    }
+    .main-menu > li:first-of-type:hover{
+        padding-bottom: 14px;
+    }
+    .menu-btn{
+        display: inline-block;
+    }
+    .main-menu > li:first-of-type:after{
+        font-family: FontAwesome, sans-serif;
+        content: "\f0c9";
+        font-size: 30px;
+        padding-bottom: 15px;
+    }
+    .main-menu > li:first-of-type:hover .menu-links{
+        display: block;
+    }
+    .main-menu > li.btn-orange, .main-menu > li.search-icon, .main-menu > li:first-of-type{
+        margin-top: 5px;
+    }
+    .drop-down ul{
+        margin-top: 10px;
+    }
+    .menu-links > li{
+        padding: 0 5px 0 10px;
+    }
+}
+@media screen and (max-width: 820px){
+    .main-menu .menu-btn, .drop-down li, .drop-down li a{
+        display: block;
+        font-size: 18px;
+        margin: 0;
+        padding: 0;
+    }
+    .drop-down ul{
+        position: static;
+        border-bottom: 2px solid #236688;
+    }
+    .drop-down:after{display: none;}
+    .drop-down:before{
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        border-top: 5px solid #aab2bc;
+        border-bottom: none;
+        content: "";
+        position: relative;
+        margin-right: 10px;
+        top: 15px;
+    }
+}
+@media screen and (max-width: 525px) {
+    .logo-left, .logo-right{
+        background-image: url("https://softuni.bg/content/images/softuni-mobile-logo.png");
+        width: 35px;
+    }
+    .logo-right{background-position-x: -35px;}
+    header li{
+        display: block;
+        margin-top: 10px;
+        margin-right: 20px;
+    }
+    .portal{top: 70px;}
+}

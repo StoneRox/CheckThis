@@ -20,9 +20,7 @@ body{
     margin-left: 10vw;
     z-index: -2;
 }
-.portal:nth-of-type(2){
-    z-index: 1;
-}
+.portal:nth-of-type(2){z-index: 1;}
 nav{
     background: #234465;
     padding: 0 10px;
@@ -41,12 +39,8 @@ nav li, .drop-down li a{
     font-weight: 900;
     outline: 0;
 }
-.main-menu > li, .menu-links > li{
-    display: inline-block;
-}
-.menu-links > li{
-    padding: 10px 5px 10px 10px;
-}
+.main-menu > li, .menu-links > li{display: inline-block;}
+.menu-links > li{padding: 10px 5px 10px 10px;}
 .btn, .logo, .menu-btn, .btn-orange, .search-icon{
     cursor: pointer;
 }
@@ -60,9 +54,7 @@ nav li, .drop-down li a{
     margin-left: 10px;
     top: 10px;
 }
-.menu-links li:hover, .menu-links li a:hover{
-    color: #ffffff;
-}
+.menu-links li a:hover{color: #ffffff;}
 .menu-links > li:hover.drop-down::after{
     border-top: 5px solid #ffffff;
 }
@@ -92,16 +84,8 @@ nav li, .drop-down li a{
     width: 90px;
     position: relative;
     display: inline-block;
-    animation-iteration-count: infinite;
-    animation-fill-mode: backwards;
-    animation-timing-function: ease-in;
-    animation-duration: 3s;
-    animation-play-state: paused;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-fill-mode: backwards;
-    -webkit-animation-timing-function: ease-in;
-    -webkit-animation-duration: 3s;
-    -webkit-animation-play-state: paused;
+    -webkit-animation: logo_left_anim 3s backwards ease-in infinite paused;
+    animation: logo_left_anim 3s backwards ease-in infinite paused;
 }
 .logo-right{
     background-position-x: -90px;
@@ -113,18 +97,14 @@ nav li, .drop-down li a{
 }
 .logo-left{
     transform-origin: bottom right;
-    animation-name: logo_left_anim;
     -webkit-transform-origin: bottom right;
-    -webkit-animation-name: logo_left_anim;
 }
 .main-menu > li.search-icon{
     font-size: 20px;
     margin-left: 10px;
     margin-top: 10px;
 }
-.main-menu > li.search-icon:hover{
-    color: #ffffff;
-}
+.main-menu > li.search-icon:hover{color: #ffffff;}
 .btn-orange, .main-menu > li.btn-orange{
     background: #ffa000;
     border-radius: 20px;
@@ -134,28 +114,19 @@ nav li, .drop-down li a{
     text-transform: none;
     border: none;
 }
-.main-menu > li.btn-orange{
-    margin-top: 10px;
-}
+.main-menu > li.btn-orange{margin-top: 10px;}
 .btn-orange:hover, .main-menu > li.btn-orange:hover{
     background: #ffffff;
     color: #234465;
 }
-.background{
+header{
     background-size: contain;
     background: url("https://softuni.bg/content/images/leadBG.jpg") no-repeat;
     height: 600px;
     color: #ffffff;
-}
-header{
-    -webkit-transition: -webkit-transform 4s;
-    transition: -webkit-transform 4s;
-    transition: transform 4s;
     -webkit-transform-origin: center top;
     transform-origin: center top;
     padding-top: 150px;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
     min-width: 320px;
 }
 h1{
@@ -234,9 +205,7 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
     bottom: 507px;
     z-index: -2;
 }
-#nag-text{
-    z-index: 1;
-}
+#nag-text{z-index: 1;}
 .dirt{
     position: fixed;
     cursor: pointer;
@@ -267,12 +236,8 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
     left: 200px;
     cursor: pointer;
 }
-.no-bullets{
-    list-style: none;
-}
-.menu-links{
-    margin-top: 6px;
-}
+.no-bullets{list-style: none;}
+.menu-links{margin-top: 6px;}
 .drop-down ul{
     display: none;
     position: absolute;
@@ -288,7 +253,6 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
 }
 .drop-down:first-of-type li, .drop-down:nth-of-type(2) li{
     padding: 5px;
-    text-transform: none;
     border-bottom: 1px solid #1e5b78;
     cursor: default;
     margin: 0;
@@ -309,9 +273,7 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
     text-decoration: none;
     text-transform: none;
 }
-.drop-down li a:hover{
-    color: #ffffff;
-}
+.drop-down li a:hover{color: #ffffff;}
 .debug{
     position: fixed;
     top: 0;
@@ -385,15 +347,9 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
     right: 8px;
     color: #ffffff;
 }
-.close-frame:hover{
-    background: #ff0000;
-}
-.blog-list {
-    left: 300px;
-
-}
+.close-frame:hover{background: #ff0000;}
+.blog-list {left: 300px;}
 .blog-list li {
-
     border: 1px solid #aab2bc;
     margin: 10px auto;
     text-transform: none;
@@ -402,19 +358,8 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
     border-radius: 5px;
     padding: 10px;
 }
-.drop-down .blog-list a {
-    color: #ffa000;
-
-}
-.drop-down:hover .blog-list li p {
-    color: #234465;
-}
-
-
-.partners-list {
-    left: 40px;
-
-}
+.drop-down .blog-list a {color: #ffa000;}
+.partners-list {left: 40px;}
 .partners-list li {
     display: inline-block;
     margin: 10px;
@@ -437,9 +382,7 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
     background: #eaeaea;
     border-radius: 5px;
 }
-.question div {
-    display: block;
-}
+.question div {display: block;}
 .question-intro p {
     display: inline-block;
     width: 40%;
@@ -455,25 +398,18 @@ p.author {
     padding-right: 10px;
     padding-top: 10px;
 }
-.fa-user, .fa-clipboard {
-    padding-right: 5px;
-}
+.fa-user, .fa-clipboard {padding-right: 5px;}
 .text {
     margin-top: 20px;
     text-align: left;
     padding-left: 10px;
-}
-.drop-down:hover .text p, .drop-down:hover .author {
-    color: #234465;
 }
 .drop-down .reply button:hover {
     background: #ffffff;
     color: #ffa000;
     cursor: pointer;
 }
-.drop-down .reed-more a:hover {
-    color: #ffa000;
-}
+.drop-down .reed-more a:hover {color: #ffa000;}
 .reply button {
     background: #ffa000;
     border-radius: 20px;
@@ -483,21 +419,7 @@ p.author {
     margin-bottom: 10px;
     border: none;
 }
-.reed-more {
-    margin-bottom: 10px;
-}
-.softuni-list {
-    left: -20px;
-}
-.softuni-list li {
-    margin: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #236688;
-}
-.softuni-list li:last-of-type {
-    border-bottom: none;
-    padding-bottom: 0;
-}
+.reed-more {margin-bottom: 10px;}
 main {
     background: #234465;
     padding: 30px 0;
@@ -537,24 +459,17 @@ article.site-info a:hover {
     font-weight: bolder;
     color: #ffa000;
 }
-article.site-info span {
-    font-weight: bolder;
-}
-#skills{
-    margin-top: 20px;
-}
+article.site-info span {font-weight: bolder;}
+#skills{margin-top: 20px;}
 #skills p{
     border-radius: 10px;
     background: #3f3661;
     border: 2px solid #a9a9a9;
     padding: 10px;
-
     color: #ffffff;
     font-size: 20px;
 }
-#skills p:hover{
-    box-shadow: inset 0 0 15px 4px #A9A9E8;
-}
+#skills p:hover{box-shadow: inset 0 0 15px 4px #A9A9E8;}
 #skills h3{
     text-align: center;
     margin-bottom: 20px;
@@ -602,12 +517,8 @@ article.site-info span {
     cursor: pointer;
     text-transform: uppercase;
 }
-.experiment button:hover{
-    background: #faa726;
-}
-.experiment button:active{
-    background: #ffd700;
-}
+.experiment button:hover{background: #faa726;}
+.experiment button:active{background: #ffd700;}
 .sun{
     background: radial-gradient(red 0% ,yellow 15%, skyblue 30%) skyblue no-repeat;
     animation: sun 5s forwards;
@@ -618,7 +529,6 @@ article.site-info span {
 .ball{
     animation: ball 2s linear forwards;
     position: relative;
-
     border-radius: 50%;
     background: repeating-radial-gradient(red 16%, yellow 18%);
 }
@@ -630,306 +540,5 @@ article.site-info span {
     background: url(http://www.animatedimages.org/data/media/516/animated-shark-image-0059.gif) -25px lightskyblue;
     background-size: 177%;
 }
-
-@-webkit-keyframes roll {
-    0%{transform: rotate(0deg) skew(0deg);}
-    11.1%{transform: rotate(0deg) skew(40deg);}
-    22.1%{transform: rotate(-90deg) skew(0deg);}
-    33.1%{transform: rotate(0deg) skew(40deg);}
-    44.1%{transform: rotate(0deg) skew(0deg);transform-origin: bottom left;}
-    55.1%{transform-origin: bottom right;}
-    66.1%{transform: rotate(0deg) skew(-40deg); }
-    77.1%{transform: rotate(90deg) skew(0deg);}
-    88.1%{transform: rotate(0deg) skew(-40deg);}
-    100%{transform: rotate(0deg) skew(0deg); transform-origin: bottom right;}
-}
-@keyframes roll {
-    0%{transform: rotate(0deg) skew(0deg);}
-    11.1%{transform: rotate(0deg) skew(40deg);}
-    22.1%{transform: rotate(-90deg) skew(0deg);}
-    33.1%{transform: rotate(0deg) skew(40deg);}
-    44.1%{transform: rotate(0deg) skew(0deg);transform-origin: bottom left;}
-    55.1%{transform-origin: bottom right;}
-    66.1%{transform: rotate(0deg) skew(-40deg); }
-    77.1%{transform: rotate(90deg) skew(0deg);}
-    88.1%{transform: rotate(0deg) skew(-40deg);}
-    100%{transform: rotate(0deg) skew(0deg); transform-origin: bottom right;}
-}
-@-webkit-keyframes ball {
-    0%{left: 0;box-shadow: 110px 20px 14px -10px rgba(50,50,50, 0.5);}
-    20%{left: 100px;box-shadow: 10px 0 14px 0 rgba(50,50,50, 0.5);}
-    60%{left: -100px;box-shadow: 220px 40px 14px -20px rgba(50,50,50, 0.5);}
-    100%{left: 100px;box-shadow: 10px 20px 14px -10px rgba(50,50,50, 0.5);}
-}
-@keyframes ball {
-    0%{left: 0;box-shadow: 110px 20px 14px -10px rgba(50,50,50, 0.5);}
-    20%{left: 100px;box-shadow: 10px 0 14px 0 rgba(50,50,50, 0.5);}
-    60%{left: -100px;box-shadow: 220px 40px 14px -20px rgba(50,50,50, 0.5);}
-    100%{left: 100px;box-shadow: 10px 20px 14px -10px rgba(50,50,50, 0.5);}
-}
-@-webkit-keyframes circle {
-    0%{border: 2px solid; border-radius: 0;}
-    10%{border-bottom: 5px solid; border-radius: 0 0 0 50%}
-    20%{
-        border-bottom: 5px solid; border-left: 5px solid; border-radius: 50% 0 0 50%}
-    30%{
-        border-bottom: 5px solid;
-        border-left: 5px solid;
-        border-top: 5px solid;
-        border-radius: 50% 50% 0 50%}
-    40%{border: 5px solid; border-radius: 50%}
-    50%{ border: 50px solid; border-radius: 50%; }
-    50%{border: 50px solid;background: none;
-        border-left: 0;
-        border-right: 0;
-    }
-    55%{background: radial-gradient(red 0% ,yellow 15%, skyblue 30%);}
-    60%{border: 20px solid; border-radius: 50%;
-        border-left: 0;
-        border-right: 0;
-        transform: rotate(0deg);
-    }
-
-    80%{border: 20px solid; border-radius: 50%;
-        border-left: 0;
-        border-right: 0;
-        background: radial-gradient(red 0% ,yellow 15%, skyblue 30%);
-        transform: rotate(1800deg);}
-    100%{
-        border: 20px solid; border-radius: 50%;
-        border-left: 0;
-        border-right: 0;
-        background: radial-gradient(red 0% ,yellow 15%, skyblue 30%);
-        transform: rotate(0deg);
-    }
-}
-@keyframes circle {
-    0%{border: 2px solid; border-radius: 0;}
-    10%{
-        border-bottom: 5px solid;
-        border-radius: 0 0 0 50%}
-    20%{
-        border-bottom: 5px solid;
-        border-left: 5px solid;
-        border-radius: 50% 0 0 50%}
-    30%{
-        border-bottom: 5px solid;
-        border-left: 5px solid;
-        border-top: 5px solid;
-        border-radius: 50% 50% 0 50%}
-    40%{
-        border: 5px solid;
-        border-radius: 50%}
-    50%{ border: 50px solid; border-radius: 50%; }
-    50%{border: 50px solid;background: none;
-        border-left: 0;
-        border-right: 0;
-    }
-    55%{background: radial-gradient(red 0% ,yellow 15%, skyblue 30%);}
-    60%{border: 20px solid; border-radius: 50%;
-        border-left: 0;
-        border-right: 0;
-        transform: rotate(0deg);
-    }
-    80%{border: 20px solid; border-radius: 50%;
-        border-left: 0;
-        border-right: 0;
-
-        transform: rotate(1800deg);}
-    100%{
-        border: 20px solid; border-radius: 50%;
-        border-left: 0;
-        border-right: 0;
-        background: radial-gradient(red 0% ,yellow 15%, skyblue 30%);
-        transform: rotate(0deg);
-    }
-}
-@-webkit-keyframes sun {
-    from{background-size: 400%; background-position: 0 0;}
-    to{background-size: 50%; background-position: -50px -50px;}
-}
-@keyframes sun {
-    from{background-size: 400%; background-position: 0 0;}
-    to{background-size: 50%; background-position: -50px -50px;}
-}
-@-webkit-keyframes logo_left_anim {
-    0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
-    10% {-webkit-transform: rotate(-90deg);transform: rotate(-90deg);}
-    20% {-webkit-transform: rotate(-90deg);transform: rotate(-90deg);}
-    100% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
-}
-@keyframes logo_left_anim {
-    0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
-    10% {-webkit-transform: rotate(-90deg);transform: rotate(-90deg);}
-    20% {-webkit-transform: rotate(-90deg);transform: rotate(-90deg);}
-    100% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
-}
-@-webkit-keyframes logo_right_anim {
-    0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
-    10% {-webkit-transform: rotate(90deg);transform: rotate(90deg);}
-    20% {-webkit-transform: rotate(90deg);transform: rotate(90deg);}
-    100% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
-}
-@keyframes logo_right_anim {
-    0% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
-    10% {-webkit-transform: rotate(90deg);transform: rotate(90deg);}
-    20% {-webkit-transform: rotate(90deg);transform: rotate(90deg);}
-    100% {-webkit-transform: rotate(0deg);transform: rotate(0deg);}
-}
-@-webkit-keyframes spiralNav
-{
-    from {
-        -webkit-transform: rotate(0deg) translate(0px) scale(1);
-        transform: rotate(0deg) translate(0px) scale(1);
-    }
-    to {
-        -webkit-transform: rotate(90deg) translate(150px) scale(0);
-        transform: rotate(90deg) translate(150px) scale(0);
-    }
-}
-@keyframes spiralNav
-{
-    from {
-        -webkit-transform: rotate(0deg) translate(0px) scale(1);
-        transform: rotate(0deg) translate(0px) scale(1);
-    }
-    to {
-        -webkit-transform: rotate(90deg) translate(150px) scale(0);
-        transform: rotate(90deg) translate(150px) scale(0);
-    }
-}
-@-webkit-keyframes spiralHeader
-{
-    from {
-        -webkit-transform: rotate(0deg) translate(0px) scale(1) rotateX(-90deg);
-        transform: rotate(0deg) translate(0px) scale(1) rotateX(-90deg);
-    }
-    to {
-        -webkit-transform: rotate(90deg) translate(150px) scale(0) rotateX(-90deg);
-        transform: rotate(90deg) translate(150px) scale(0) rotateX(-90deg);
-    }
-}
-@keyframes spiralHeader
-{
-    from {
-        -webkit-transform: rotate(0deg) translate(0px) scale(1) rotateX(-90deg);
-        transform: rotate(0deg) translate(0px) scale(1) rotateX(-90deg);
-    }
-    to {
-        -webkit-transform: rotate(90deg) translate(150px) scale(0) rotateX(-90deg);
-        transform: rotate(90deg) translate(150px) scale(0) rotateX(-90deg);
-    }
-}
-@media screen and (max-width: 1200px) {
-    .logo-left, .logo-right{
-        background-image: url("https://softuni.bg/content/images/softuni-mobile-logo.png");
-        width: 35px;
-    }
-    .logo-right{
-        background-position-x: -35px;
-    }
-}
-@media screen and (max-width: 990px) {
-    .menu-links{
-        display: none;
-        background: #234465;
-        padding: 10px 0;
-        width: 100vw;
-        position: absolute;
-        top: 34px;
-        border-top: 2px solid #236688;
-        min-width: 320px;
-        right: -20px;
-    }
-    .menu-btn{
-        margin-right: 20px;
-    }
-    .logo-left, .logo-right{
-        background-image: url("https://softuni.bg/content/images/software-university-logo.png");
-        width: 90px;
-    }
-    .logo-right{
-        background-position-x: -90px;
-    }
-    .main-menu > li:first-of-type{
-        padding: 0;
-        position: absolute;
-        right: -40px;
-        margin: 0;
-    }
-
-    .main-menu > li:first-of-type:hover{
-        padding-bottom: 14px;
-    }
-    .menu-btn{
-        display: inline-block;
-    }
-    .main-menu > li:first-of-type:after{
-        font-family: FontAwesome, sans-serif;
-        content: "\f0c9";
-        font-size: 30px;
-        padding-bottom: 15px;
-    }
-    .main-menu > li:first-of-type:hover .menu-links{
-        display: block;
-    }
-    .main-menu > li.btn-orange, .main-menu > li.search-icon, .main-menu > li:first-of-type{
-        margin-top: 5px;
-    }
-    .drop-down ul{
-        margin-top: 10px;
-    }
-    .menu-links > li{
-        padding: 0 5px 0 10px;
-    }
-}
-@media screen and (max-width: 820px){
-    .main-menu .menu-btn, .drop-down li, .drop-down li a{
-        display: block;
-        font-size: 18px;
-        margin: 0;
-        padding: 0;
-    }
-
-    .drop-down ul{
-        position: static;
-        border-bottom: 2px solid #236688;
-    }
-    .drop-down:after{
-        display: none;
-    }
-    .drop-down:before{
-        border-right: 5px solid transparent;
-        border-left: 5px solid transparent;
-        border-top: 5px solid #aab2bc;
-        border-bottom: none;
-        content: "";
-        position: relative;
-        margin-right: 10px;
-        top: 15px;
-    }
-}
-@media screen and (max-width: 525px) {
-    .logo-left, .logo-right{
-        background-image: url("https://softuni.bg/content/images/softuni-mobile-logo.png");
-        width: 35px;
-    }
-    .logo-right{
-        background-position-x: -35px;
-    }
-    header li{
-        display: block;
-        margin-top: 10px;
-        margin-right: 20px;
-    }
-    .portal{
-        top: 70px;
-    }
-}
-
-@media screen and (max-width: 920px) {
-    .softuni-list li {
-        text-align: center;
-    }
-
-}
+.spiral-header{animation: spiralHeader 4s linear forwards;}
+.spiral-nav{animation: spiralNav 4s linear forwards; animation-delay: 1.3s;}
