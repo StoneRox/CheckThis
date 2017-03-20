@@ -646,3 +646,4 @@ footer>*{
     display: inline-block;
     vertical-align: top;
 }
+.menu-links>li:hover{color: #ffffff;}
