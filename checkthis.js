@@ -192,12 +192,10 @@ function experiment() {
     if(document.getElementById('test_subject').getAttribute('class')=='none'){
         let r = RandomInt(0,4);
         let c = ['ball', 'sun', 'roll', 'circle'];
-        let d = [3000, 6000, 9000, 11000];
+        let d = [3000, 4000, 8000, 10000];
         document.getElementById('test_subject').setAttribute('class', c[r]);
         setTimeout(function () {
             document.getElementById('test_subject').setAttribute('class', 'none');
         }, d[r]);
     }
-
-
 }

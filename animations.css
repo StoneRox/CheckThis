@@ -167,3 +167,11 @@
         background: url(https://softuni.bg/content/images/leadBG.jpg) no-repeat;
         height: 600px;color: #ffffff;}
 }
+@keyframes colour-change {
+    from {background-color: cornflowerblue;}
+    to {background-color: orange}
+}
+@keyframes fonta {
+    0% {font-size: 1em}
+    50%{font-size: 2em}
+}

@@ -25,8 +25,6 @@ nav{
     background: #234465;
     padding: 0 10px;
     text-align: center;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
     min-width: 300px;
     height: 60px;
     position: relative;
@@ -433,7 +431,6 @@ article.site-info {
     border: 2px solid #213350;
     border-radius: 10px;
     box-shadow: 6px 6px 7px 2px rgba(138, 132, 125, 0.39);
-    transition: all linear 0.5s;
 }
 article.site-info:hover {
     color: #565656;
@@ -540,8 +537,15 @@ article.site-info span {font-weight: bolder;}
     background: url(http://www.animatedimages.org/data/media/516/animated-shark-image-0059.gif) -25px lightskyblue;
     background-size: 177%;
 }
-.spiral-header{animation: spiralHeader 4s linear forwards;}
-.spiral-nav{animation: spiralNav 4s linear forwards; animation-delay: 1.3s;}
+.spiral-header{
+    -webkit-animation: spiralHeader 4s linear forwards;
+    animation: spiralHeader 4s linear forwards;
+}
+.spiral-nav{
+    -webkit-animation: spiralNav 4s linear forwards;
+    animation: spiralNav 4s linear forwards;
+    animation-delay: 1.3s;
+}
 .header-btns ul li:hover {
     z-index: 2;
     -webkit-transition: all 200ms ease-in;
@@ -552,14 +556,6 @@ article.site-info span {font-weight: bolder;}
     -moz-transform: scale(1.3);
     transition: all 200ms ease-in;
     transform: scale(1.3);
-}
-@keyframes colour-change {
-    from {background-color: cornflowerblue;}
-    to {background-color: orange}
-}
-@keyframes fonta {
-  0% {font-size: 1em}
-  50%{font-size: 2em}
 }
 .header-btns ul li:nth-child(3) {
     animation-name: colour-change;
@@ -578,10 +574,75 @@ article.site-info span {font-weight: bolder;}
     animation-delay: 4s;
     animation-duration: 4s;
 }
-@media screen and (max-width: 520px) {
-    .header-btns ul {
-        width: 88%;
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-    }
+footer{
+    width: 100%;
+    background: #172e44;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.send-to-top{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #aab2bc;
+    font-weight: 700;
+    float: left;
+}
+.send-to-top:hover{
+    color: #ffffff;
+}
+.send-to-top:hover:before, .send-to-top:hover:after{
+    position: relative;
+    bottom: 15px;
+}
+.send-to-top:before, .send-to-top:after{
+    font-family: FontAwesome,sans-serif;
+    content: "\f176";
+    margin: 0 5px;
+}
+.social-icons a:first-of-type:before{
+    font-family: FontAwesome,sans-serif;
+    content: "\f09b";
+}
+.social-icons a:last-of-type:before{
+    font-family: FontAwesome,sans-serif;
+    content: "\f09a";
+}
+.credentials{
+    float: right;
+    margin-right: 3vw;
+    margin-top: 10px;
+    color: #878e98;
+}
+.credentials span{
+    display: block;
+    text-shadow: 0 1px 0 #85ffcb, 1px 1px 0 #ffffff;
+    font-size: 25px;
+}
+.team-contacts{
+    list-style: none;
+    text-align: left;
+}
+.team-member{
+    display: inline-block;
+    color: #dddddd;
+}
+.social-icons{
+    display: inline-block;
+}
+.social-icons a{
+    color: #daa520;
+    text-decoration: none;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    font-size: 25px;
+    margin: 0 10px;
+}
+.social-icons a:hover{
+    font-size: 30px;
+    color: chocolate;
+}
+footer>*{
+    display: inline-block;
+    vertical-align: top;
+}
