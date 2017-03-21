@@ -199,3 +199,6 @@ function experiment() {
         }, d[r]);
     }
 }
+function HideDroppedMenu() {
+    menu_dropped.style.display="none";
+}

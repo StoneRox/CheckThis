@@ -647,3 +647,9 @@ footer>*{
     vertical-align: top;
 }
 .menu-links>li:hover{color: #ffffff;}
+.menu-links{
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    -webkit-transition: transform 1s;
+    transition: transform 1s;
+}
