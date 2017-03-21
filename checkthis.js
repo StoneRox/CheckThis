@@ -200,5 +200,7 @@ function experiment() {
     }
 }
 function HideDroppedMenu() {
-    menu_dropped.style.display="none";
+    if(menu_dropped != null){
+        menu_dropped.style.display="none";
+    }
 }
