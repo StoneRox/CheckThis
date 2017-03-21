@@ -294,7 +294,7 @@ header li:nth-of-type(2):hover, header li:last-of-type:hover{
 }
 .apple-greetings{
     width: 100vw;
-    height: 1000px;
+    height: 100%;
     background: #000000;
     position: fixed;
     z-index: 10;
